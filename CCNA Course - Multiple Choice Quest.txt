@@ -1,0 +1,2548 @@
+CCNA Course - Multiple Choice Questions
+Part 1: Networking Fundamentals
+Day 1: Network Devices
+
+Which network device operates at Layer 2 of the OSI model and makes forwarding decisions based on MAC addresses?
+
+A) Router
+B) Switch
+C) Hub
+D) Firewall
+Answer: B
+
+
+What is the primary function of a router in a network?
+
+A) Connect devices within the same network
+B) Route traffic between different networks
+C) Amplify signals
+D) Filter traffic based on MAC addresses
+Answer: B
+
+
+Which device broadcasts all incoming traffic to all ports except the source port?
+
+A) Switch
+B) Router
+C) Hub
+D) Bridge
+Answer: C
+
+
+What type of device is used to connect multiple networks and make forwarding decisions based on IP addresses?
+
+A) Hub
+B) Switch
+C) Router
+D) Repeater
+Answer: C
+
+
+Which network device can operate at multiple layers of the OSI model and provide both switching and routing functions?
+
+A) Hub
+B) Multilayer switch
+C) Bridge
+D) Repeater
+Answer: B
+
+
+
+
+Day 2: Interfaces and Cables
+
+What is the maximum cable length for a standard Ethernet Cat5e/Cat6 cable?
+
+A) 50 meters
+B) 100 meters
+C) 150 meters
+D) 200 meters
+Answer: B
+
+
+Which cable type is used to connect two similar devices directly (e.g., switch to switch)?
+
+A) Straight-through cable
+B) Crossover cable
+C) Rollover cable
+D) Fiber optic cable
+Answer: B
+
+
+What type of cable is typically used to connect a computer to a router's console port?
+
+A) Straight-through cable
+B) Crossover cable
+C) Rollover cable
+D) Coaxial cable
+Answer: C
+
+
+Which Ethernet standard supports speeds up to 1 Gbps over copper cabling?
+
+A) 10BASE-T
+B) 100BASE-TX
+C) 1000BASE-T
+D) 10GBASE-T
+Answer: C
+
+
+What is the main advantage of fiber optic cables over copper cables?
+
+A) Lower cost
+B) Easier installation
+C) Longer distance and immunity to EMI
+D) Better compatibility
+Answer: C
+
+
+
+
+Day 3: OSI Model & TCP/IP Suite
+
+How many layers does the OSI model have?
+
+A) 5
+B) 7
+C) 4
+D) 6
+Answer: B
+
+
+Which OSI layer is responsible for end-to-end communication and error recovery?
+
+A) Network Layer
+B) Data Link Layer
+C) Transport Layer
+D) Session Layer
+Answer: C
+
+
+At which OSI layer does a router operate?
+
+A) Layer 1
+B) Layer 2
+C) Layer 3
+D) Layer 4
+Answer: C
+
+
+Which TCP/IP layer corresponds to the OSI Physical and Data Link layers?
+
+A) Internet Layer
+B) Network Access Layer
+C) Transport Layer
+D) Application Layer
+Answer: B
+
+
+What is the Protocol Data Unit (PDU) at the Transport Layer called?
+
+A) Frame
+B) Packet
+C) Segment
+D) Data
+Answer: C
+
+
+
+
+Day 4: Intro to the CLI
+
+Which command is used to enter privileged EXEC mode on a Cisco device?
+
+A) enable
+B) configure terminal
+C) login
+D) exec
+Answer: A
+
+
+What command is used to save the running configuration to the startup configuration?
+
+A) save config
+B) write memory
+C) copy run start
+D) Both B and C
+Answer: D
+
+
+Which command enters global configuration mode?
+
+A) enable
+B) config t
+C) configure
+D) setup
+Answer: B
+
+
+What is the purpose of the "no" command in Cisco IOS?
+
+A) Deny access
+B) Remove or disable a configuration
+C) Exit configuration mode
+D) Display negative output
+Answer: B
+
+
+Which command displays the current configuration that is running on the device?
+
+A) show startup-config
+B) show running-config
+C) show config
+D) display config
+Answer: B
+
+
+
+
+Day 5: Ethernet LAN Switching (Part 1)
+
+What is the format of a MAC address?
+
+A) 32-bit binary
+B) 48-bit hexadecimal
+C) 64-bit decimal
+D) 128-bit hexadecimal
+Answer: B
+
+
+How does a switch learn MAC addresses?
+
+A) Manually configured
+B) By examining source MAC addresses of incoming frames
+C) By examining destination MAC addresses
+D) Through DHCP
+Answer: B
+
+
+What does a switch do when it receives a frame with an unknown destination MAC address?
+
+A) Drops the frame
+B) Forwards it to the default gateway
+C) Floods it out all ports except the source port
+D) Sends an error message
+Answer: C
+
+
+What is the maximum number of MAC addresses a switch can typically store in its MAC address table?
+
+A) 256
+B) 1,024
+C) Varies by switch model (typically thousands)
+D) Unlimited
+Answer: C
+
+
+What happens to MAC address table entries if no traffic is received from that address for a period of time?
+
+A) They are marked as inactive
+B) They are aged out and removed
+C) They are archived
+D) Nothing happens
+Answer: B
+
+
+
+
+Day 6: Ethernet LAN Switching (Part 2)
+
+What is the default aging time for MAC address table entries on most Cisco switches?
+
+A) 30 seconds
+B) 60 seconds
+C) 300 seconds (5 minutes)
+D) 600 seconds (10 minutes)
+Answer: C
+
+
+Which switching method begins forwarding a frame before the entire frame is received?
+
+A) Store-and-forward
+B) Cut-through
+C) Fragment-free
+D) Adaptive switching
+Answer: B
+
+
+What is the main advantage of store-and-forward switching?
+
+A) Lowest latency
+B) Error checking before forwarding
+C) Fastest processing
+D) Less memory required
+Answer: B
+
+
+What type of frame does a switch receive when a broadcast is sent?
+
+A) Unicast frame
+B) Multicast frame
+C) Broadcast frame with destination MAC FF:FF:FF:FF:FF:FF
+D) Anycast frame
+Answer: C
+
+
+What command shows the MAC address table on a Cisco switch?
+
+A) show mac table
+B) show mac-address-table
+C) display mac addresses
+D) show addresses
+Answer: B
+
+
+
+
+Day 7: IPv4 Addressing (Part 1)
+
+How many bits are in an IPv4 address?
+
+A) 16
+B) 32
+C) 64
+D) 128
+Answer: B
+
+
+Which class of IPv4 address has a first octet range of 192-223?
+
+A) Class A
+B) Class B
+C) Class C
+D) Class D
+Answer: C
+
+
+What is the default subnet mask for a Class B network?
+
+A) 255.0.0.0
+B) 255.255.0.0
+C) 255.255.255.0
+D) 255.255.255.255
+Answer: B
+
+
+Which of the following is a private IP address range?
+
+A) 172.32.0.0/12
+B) 10.0.0.0/8
+C) 192.169.0.0/16
+D) 11.0.0.0/8
+Answer: B
+
+
+What is the binary equivalent of the decimal number 192?
+
+A) 11000000
+B) 10101010
+C) 11001100
+D) 10110000
+Answer: A
+
+
+
+
+Day 8: IPv4 Addressing (Part 2)
+
+What does CIDR stand for?
+
+A) Class Interdomain Routing
+B) Classless Inter-Domain Routing
+C) Classful Internet Domain Routing
+D) Combined Internet Domain Resolution
+Answer: B
+
+
+How many usable host addresses are in a /28 network?
+
+A) 14
+B) 16
+C) 30
+D) 32
+Answer: A
+
+
+What is the network address for the IP 192.168.10.75/26?
+
+A) 192.168.10.0
+B) 192.168.10.64
+C) 192.168.10.128
+D) 192.168.10.32
+Answer: B
+
+
+Which command is used to configure an IP address on a Cisco router interface?
+
+A) set ip address
+B) ip address [address] [mask]
+C) address ip [address] [mask]
+D) configure ip [address]
+Answer: B
+
+
+What is the broadcast address for the network 10.1.1.0/24?
+
+A) 10.1.1.0
+B) 10.1.1.255
+C) 10.1.1.254
+D) 10.1.2.0
+Answer: B
+
+
+
+
+Day 9: Switch Interfaces
+
+What is the default state of switch interfaces on most Cisco switches?
+
+A) Administratively down
+B) Enabled and up
+C) Disabled
+D) Shutdown
+Answer: B
+
+
+Which command shows the status of all interfaces on a switch?
+
+A) show interfaces
+B) show ip interface brief
+C) show interface status
+D) All of the above
+Answer: D
+
+
+What does the speed/duplex setting "auto" mean on a switch interface?
+
+A) Maximum speed only
+B) Negotiates speed and duplex with connected device
+C) Always uses full duplex
+D) Disables the interface
+Answer: B
+
+
+Which command disables an interface on a Cisco switch?
+
+A) disable
+B) no enable
+C) shutdown
+D) down
+Answer: C
+
+
+What is a duplex mismatch and what problem does it cause?
+
+A) Different cable types; causes no connection
+B) One side full-duplex, other half-duplex; causes performance issues
+C) Different IP addresses; causes routing errors
+D) Different VLANs; causes no communication
+Answer: B
+
+
+
+
+Day 10: The IPv4 Header
+
+What is the minimum size of an IPv4 header without options?
+
+A) 20 bytes
+B) 32 bytes
+C) 40 bytes
+D) 60 bytes
+Answer: A
+
+
+Which field in the IPv4 header is used to prevent routing loops?
+
+A) Header Checksum
+B) Time to Live (TTL)
+C) Fragment Offset
+D) Protocol
+Answer: B
+
+
+What does the Protocol field in the IPv4 header indicate?
+
+A) The version of IP
+B) The upper layer protocol (TCP, UDP, ICMP, etc.)
+C) The source port number
+D) The packet priority
+Answer: B
+
+
+What is the maximum value of the TTL field?
+
+A) 64
+B) 128
+C) 255
+D) 512
+Answer: C
+
+
+Which field in the IPv4 header contains the source IP address?
+
+A) Bytes 0-3
+B) Bytes 8-11
+C) Bytes 12-15
+D) Bytes 16-19
+Answer: C
+
+
+
+
+Part 2: Routing & IP Connectivity
+Day 11: Routing Fundamentals & Static Routing
+
+What information does a routing table contain?
+
+A) MAC addresses
+B) Network destinations and how to reach them
+C) Port numbers
+D) User credentials
+Answer: B
+
+
+What command is used to configure a static route on a Cisco router?
+
+A) route add
+B) ip route [destination] [mask] [next-hop]
+C) set route
+D) configure route
+Answer: B
+
+
+What is the administrative distance of a directly connected network?
+
+A) 0
+B) 1
+C) 5
+D) 10
+Answer: A
+
+
+What is the administrative distance of a static route?
+
+A) 0
+B) 1
+C) 5
+D) 10
+Answer: B
+
+
+Which command displays the routing table on a Cisco router?
+
+A) show routes
+B) show ip route
+C) display routing-table
+D) show routing
+Answer: B
+
+
+
+
+Day 12: Life of a Packet
+
+What process does a device use to determine if a destination IP is on the same network?
+
+A) MAC address lookup
+B) ANDing the IP address with the subnet mask
+C) DNS resolution
+D) ARP broadcast
+Answer: B
+
+
+What protocol is used to resolve an IP address to a MAC address?
+
+A) ICMP
+B) DNS
+C) ARP
+D) DHCP
+Answer: C
+
+
+What happens to the TTL field in the IP header at each router hop?
+
+A) Increases by 1
+B) Decreases by 1
+C) Stays the same
+D) Resets to 255
+Answer: B
+
+
+When a packet travels through a router, which addresses change?
+
+A) Source and destination IP addresses
+B) Source and destination MAC addresses
+C) Only source IP address
+D) Only destination IP address
+Answer: B
+
+
+What message is sent back when TTL reaches 0?
+
+A) Destination Unreachable
+B) Time Exceeded
+C) Echo Reply
+D) Redirect
+Answer: B
+
+
+
+
+Day 13: Subnetting (Part 1)
+
+How many subnets can be created from a /24 network if you borrow 3 bits?
+
+A) 3
+B) 6
+C) 8
+D) 16
+Answer: C
+
+
+What is the subnet mask for a /27 network in decimal notation?
+
+A) 255.255.255.0
+B) 255.255.255.128
+C) 255.255.255.192
+D) 255.255.255.224
+Answer: D
+
+
+How many usable host addresses are in a /29 subnet?
+
+A) 4
+B) 6
+C) 8
+D) 14
+Answer: B
+
+
+What is the network address increment for a /26 subnet?
+
+A) 32
+B) 64
+C) 128
+D) 256
+Answer: B
+
+
+If you need at least 30 host addresses per subnet, what is the minimum subnet mask you can use?
+
+A) /26
+B) /27
+C) /28
+D) /29
+Answer: A
+
+
+
+
+Day 14: Subnetting (Part 2)
+
+What is the valid host range for the network 192.168.1.64/27?
+
+A) 192.168.1.65 - 192.168.1.94
+B) 192.168.1.64 - 192.168.1.95
+C) 192.168.1.65 - 192.168.1.95
+D) 192.168.1.1 - 192.168.1.62
+Answer: A
+
+
+How many /28 subnets can be created from a /24 network?
+
+A) 8
+B) 12
+C) 16
+D) 32
+Answer: C
+
+
+What is the broadcast address for 10.10.10.128/25?
+
+A) 10.10.10.127
+B) 10.10.10.255
+C) 10.10.10.254
+D) 10.10.10.191
+Answer: B
+
+
+If you subnet 172.16.0.0/16 into /24 networks, how many subnets do you get?
+
+A) 16
+B) 64
+C) 128
+D) 256
+Answer: D
+
+
+What subnet does the IP address 192.168.1.195/28 belong to?
+
+A) 192.168.1.176/28
+B) 192.168.1.192/28
+C) 192.168.1.208/28
+D) 192.168.1.128/28
+Answer: B
+
+
+
+
+Day 15: Subnetting (Part 3 - VLSM)
+
+What does VLSM stand for?
+
+A) Very Large Subnet Mask
+B) Variable Length Subnet Mask
+C) Virtual LAN Subnet Mask
+D) Verified Length Subnet Masking
+Answer: B
+
+
+What is the main advantage of VLSM?
+
+A) Easier configuration
+B) More efficient use of IP address space
+C) Faster routing
+D) Better security
+Answer: B
+
+
+When using VLSM, which subnets should you allocate first?
+
+A) Smallest subnets first
+B) Largest subnets first
+C) Any order
+D) Medium-sized subnets first
+Answer: B
+
+
+Can VLSM be used with classful routing protocols?
+
+A) Yes, always
+B) No, only classless routing protocols support VLSM
+C) Only with RIPv1
+D) Only with IGRP
+Answer: B
+
+
+Which of the following is a classless routing protocol that supports VLSM?
+
+A) RIPv1
+B) IGRP
+C) OSPF
+D) All of the above
+Answer: C
+
+
+
+
+Part 3: Switching & VLANs
+Day 16: VLANs (Part 1)
+
+What is the purpose of VLANs?
+
+A) Increase bandwidth
+B) Segment broadcast domains logically
+C) Increase physical security
+D) Replace routers
+Answer: B
+
+
+What is the default VLAN on Cisco switches?
+
+A) VLAN 0
+B) VLAN 1
+C) VLAN 10
+D) VLAN 100
+Answer: B
+
+
+What is the normal range of VLANs?
+
+A) 1-1005
+B) 1-4094
+C) 2-1001
+D) 2-4094
+Answer: A
+
+
+Which command creates a VLAN on a Cisco switch?
+
+A) create vlan [number]
+B) vlan [number]
+C) add vlan [number]
+D) set vlan [number]
+Answer: B
+
+
+What type of port carries traffic for only one VLAN?
+
+A) Trunk port
+B) Access port
+C) Dynamic port
+D) Hybrid port
+Answer: B
+
+
+
+
+Day 17: VLANs (Part 2)
+
+What is the purpose of a trunk port?
+
+A) Connect end devices
+B) Carry traffic for multiple VLANs between switches
+C) Provide redundancy
+D) Block unauthorized VLANs
+Answer: B
+
+
+Which protocol is used to tag VLAN traffic on trunk links?
+
+A) VTP
+B) STP
+C) 802.1Q
+D) ISL
+Answer: C
+
+
+What is the native VLAN on a trunk port?
+
+A) VLAN that is blocked
+B) VLAN that carries untagged traffic
+C) VLAN with highest priority
+D) VLAN 0
+Answer: B
+
+
+What is the default native VLAN?
+
+A) VLAN 0
+B) VLAN 1
+C) VLAN 100
+D) VLAN 999
+Answer: B
+
+
+Which command configures a switch port as a trunk?
+
+A) switchport mode access
+B) switchport mode trunk
+C) switchport trunk
+D) set trunk
+Answer: B
+
+
+
+
+Day 18: VLANs (Part 3)
+
+What is inter-VLAN routing?
+
+A) Routing between different switches
+B) Routing between different VLANs
+C) Routing within the same VLAN
+D) Routing between different routers
+Answer: B
+
+
+What is Router-on-a-Stick (ROAS)?
+
+A) Physical router placement
+B) Using a router with subinterfaces to route between VLANs
+C) Stacking multiple routers
+D) Redundant router configuration
+Answer: B
+
+
+What command creates a subinterface on a router?
+
+A) interface gigabitEthernet 0/0.10
+B) subinterface 0/0.10
+C) create subinterface 10
+D) vlan interface 10
+Answer: A
+
+
+Which command associates a subinterface with a VLAN?
+
+A) vlan [number]
+B) encapsulation dot1q [vlan-id]
+C) trunk vlan [number]
+D) set vlan [number]
+Answer: B
+
+
+What is the advantage of using a Layer 3 switch for inter-VLAN routing?
+
+A) Lower cost
+B) Easier configuration
+C) Better performance than ROAS
+D) More VLANs supported
+Answer: C
+
+
+
+
+Day 19: DTP & VTP
+
+What does DTP stand for?
+
+A) Dynamic Trunking Protocol
+B) Data Transfer Protocol
+C) Dynamic Transfer Protocol
+D) Distributed Trunking Protocol
+Answer: A
+
+
+What is the default DTP mode on Cisco switches?
+
+A) Trunk
+B) Access
+C) Dynamic Auto
+D) Dynamic Desirable
+Answer: C
+
+
+What does VTP stand for?
+
+A) VLAN Transfer Protocol
+B) VLAN Trunking Protocol
+C) Virtual Trunking Protocol
+D) Virtual Transfer Protocol
+Answer: B
+
+
+In which VTP mode can you create, modify, and delete VLANs?
+
+A) Server mode
+B) Client mode
+C) Transparent mode
+D) All modes
+Answer: A
+
+
+Why is VTP version 3 preferred over version 2?
+
+A) Faster synchronization
+B) Better security and protection against accidental changes
+C) Supports more VLANs
+D) Easier configuration
+Answer: B
+
+
+
+
+Day 20: Spanning Tree Protocol (Part 1)
+
+What is the primary purpose of Spanning Tree Protocol (STP)?
+
+A) Increase bandwidth
+B) Prevent Layer 2 loops
+C) Provide redundancy
+D) Load balancing
+Answer: B
+
+
+What IEEE standard defines the original Spanning Tree Protocol?
+
+A) 802.1Q
+B) 802.1D
+C) 802.1W
+D) 802.1X
+Answer: B
+
+
+What is the root bridge in STP?
+
+A) Switch with highest MAC address
+B) Switch with lowest priority and MAC address
+C) Switch with most connections
+D) Manually designated switch
+Answer: B
+
+
+What is the default STP priority value?
+
+A) 0
+B) 4096
+C) 32768
+D) 65535
+Answer: C
+
+
+What are the STP port states in order?
+
+A) Disabled, Blocking, Listening, Learning, Forwarding
+B) Blocking, Listening, Learning, Forwarding
+C) Listening, Learning, Blocking, Forwarding
+D) Learning, Listening, Forwarding
+Answer: B
+
+
+
+
+Day 21: Spanning Tree Protocol (Part 2)
+
+How long does it take for a port to transition from Blocking to Forwarding in standard STP?
+
+A) 15 seconds
+B) 20 seconds
+C) 30 seconds
+D) 50 seconds
+Answer: D
+
+
+What is the purpose of BPDU Guard?
+
+A) Prevent unauthorized switches from affecting STP topology
+B) Speed up convergence
+C) Block BPDUs on trunk ports
+D) Increase security
+Answer: A
+
+
+What feature allows edge ports to immediately transition to Forwarding state?
+
+A) UplinkFast
+B) BackboneFast
+C) PortFast
+D) RootGuard
+Answer: C
+
+
+What is the STP cost of a 1 Gbps link?
+
+A) 4
+B) 19
+C) 100
+D) 1000
+Answer: A
+
+
+Which command sets the STP priority on a Cisco switch?
+
+A) set priority [value]
+B) spanning-tree vlan [vlan-id] priority [value]
+C) stp priority [value]
+D) priority [value]
+Answer: B
+
+
+
+
+Day 22: Rapid STP
+
+What IEEE standard defines Rapid Spanning Tree Protocol (RSTP)?
+
+A) 802.1D
+B) 802.1W
+C) 802.1S
+D) 802.1Q
+Answer: B
+
+
+What is the maximum convergence time for RSTP?
+
+A) About 50 seconds
+B) About 30 seconds
+C) About 6 seconds (3x Hello time)
+D) Instantaneous
+Answer: C
+
+
+Which RSTP port role replaces the STP Blocking state?
+
+A) Designated
+B) Root
+C) Alternate
+D) Backup
+Answer: C
+
+
+What RSTP port state is equivalent to STP Forwarding?
+
+A) Learning
+B) Discarding
+C) Forwarding
+D) Listening
+Answer: C
+
+
+What is the RSTP port type for connections to end devices?
+
+A) Point-to-point
+B) Shared
+C) Edge
+D) Root
+Answer: C
+
+
+
+
+Day 23: EtherChannel
+
+What is the purpose of EtherChannel?
+
+A) Increase security
+B) Bundle multiple physical links into one logical link
+C) Separate VLANs
+D) Prevent loops
+Answer: B
+
+
+What are the two protocols that can be used to negotiate EtherChannel?
+
+A) STP and RSTP
+B) VTP and DTP
+C) LACP and PAgP
+D) OSPF and EIGRP
+Answer: C
+
+
+Which EtherChannel protocol is an IEEE standard?
+
+A) PAgP
+B) LACP
+C) Both
+D) Neither
+Answer: B
+
+
+What is the maximum number of physical interfaces that can be in an EtherChannel?
+
+A) 4
+B) 8
+C) 16
+D) 32
+Answer: B
+
+
+What must be identical on all interfaces in an EtherChannel?
+
+A) Speed, duplex, and VLAN configuration
+B) Only speed
+C) Only VLAN
+D) Nothing needs to match
+Answer: A
+
+
+
+
+Part 4: Dynamic Routing
+Day 24: Dynamic Routing
+
+What is the main advantage of dynamic routing over static routing?
+
+A) More secure
+B) Automatically adapts to network topology changes
+C) Faster packet forwarding
+D) Lower bandwidth usage
+Answer: B
+
+
+What are the two main categories of dynamic routing protocols?
+
+A) Static and Dynamic
+B) Interior and Exterior
+C) Distance Vector and Link State
+D) Classful and Classless
+Answer: C
+
+
+What metric does RIP use?
+
+A) Bandwidth
+B) Hop count
+C) Cost
+D) Delay
+Answer: B
+
+
+What is administrative distance used for?
+
+A) Calculate metric
+B) Determine trustworthiness of routing sources
+C) Set router priority
+D) Configure access lists
+Answer: B
+
+
+Which has the lowest administrative distance?
+
+A) Static route
+B) OSPF
+C) EIGRP
+D) RIP
+Answer: A    
+
+
+Day 25: RIP & EIGRP
+Which of the following is a characteristic of RIPv2 that is NOT present in RIPv1?
+a) Uses hop count as its metric
+b) Supports classful routing
+c) Sends updates via multicast (224.0.0.9)
+d) Includes subnet mask in routing updates
+Correct: d
+
+What is the default administrative distance (AD) of EIGRP internal routes?
+a) 90
+b) 100
+c) 110
+d) 120
+Correct: a
+
+EIGRP uses a composite metric. By default, which two metrics does it use to calculate its best path?
+a) Bandwidth and Load
+b) Bandwidth and Delay
+c) Load and Reliability
+d) Delay and MTU
+Correct: b
+
+Which command correctly enables EIGRP for autonomous system 100 on a Cisco router?
+a) router eigrp
+b) router eigrp 100
+c) enable eigrp 100
+d) routing-protocol eigrp 100
+Correct: b
+
+What is the primary purpose of the EIGRP "Feasible Condition"?
+a) To determine the composite metric
+b) To establish neighbor adjacencies
+c) To select a feasible successor and prevent routing loops
+d) To redistribute routes from other protocols
+Correct: c
+
+Day 26: OSPF (Part 1)
+Which OSPF packet type is used to initially discover OSPF neighbors and establish neighbor adjacencies?
+a) LSU (Link-State Update)
+b) LSA (Link-State Advertisement)
+c) Hello
+d) LSR (Link-State Request)
+Correct: c
+
+What must match on two OSPF routers for them to become adjacent neighbors on a multi-access network? (Choose two)
+a) IP Address
+b) Area ID
+c) Router ID
+d) Hello and Dead Timers
+Correct: b, d
+
+What is the purpose of the OSPF Router ID?
+a) To set the metric for all interfaces
+b) To uniquely identify each router in the OSPF domain
+c) To determine the DR/BDR election priority
+d) To define the subnet mask for advertised routes
+Correct: b
+
+Which command correctly places an interface with IP address 10.1.1.1/24 into OSPF area 0?
+a) network 10.1.1.0 0.0.0.255 area 0
+b) router ospf 1 followed by network 10.1.1.0 255.255.255.0 area 0
+c) ospf enable area 0
+d) network 10.0.0.0 0.255.255.255 area 0
+Correct: a
+
+On a multi-access network (like Ethernet), which OSPF router types form adjacencies with all other routers to ensure efficient LSA flooding?
+a) All routers form full mesh adjacencies
+b) Only the Designated Router (DR) and Backup Designated Router (BDR)
+c) Only routers with the highest priority
+d) Only ABRs (Area Border Routers)
+Correct: b
+
+Day 27: OSPF (Part 2)
+What is the primary function of an OSPF Designated Router (DR)?
+a) To act as a default gateway for the area
+b) To summarize routes between areas
+c) To reduce routing update overhead by managing LSA exchanges on a multi-access segment
+d) To authenticate all OSPF packets
+Correct: c
+
+In OSPF, what is the default reference bandwidth used to calculate interface cost?
+a) 1 Mbps
+b) 10 Mbps
+c) 100 Mbps
+d) 1 Gbps
+Correct: c
+
+Which OSPF router type connects an OSPF area to the backbone area (Area 0)?
+a) Internal Router
+b) Autonomous System Boundary Router (ASBR)
+c) Designated Router (DR)
+d) Area Border Router (ABR)
+Correct: d
+
+The OSPF metric (cost) for an interface is calculated using which formula?
+a) Cost = Reference Bandwidth / Interface Bandwidth
+b) Cost = Hop Count
+c) Cost = Delay / 10
+d) Cost = 10^8 / Bandwidth in bps
+Correct: a
+
+What OSPF LSA type is generated by an ABR to advertise networks from one area to the backbone area?
+a) Type 1 - Router LSA
+b) Type 2 - Network LSA
+c) Type 3 - Summary LSA
+d) Type 5 - AS External LSA
+Correct: c
+
+Day 28: OSPF (Part 3)
+Which command will display the OSPF neighbor adjacency table on a Cisco router?
+a) show ip ospf
+b) show ip route ospf
+c) show ip ospf neighbor
+d) show ospf database
+Correct: c
+
+An OSPF router is in the "FULL" state with a neighbor. What does this indicate?
+a) The routers are exchanging Hello packets only.
+b) The routers have successfully exchanged complete Link-State Databases (LSDBs).
+c) The routers are in the process of exchanging LSRs and LSUs.
+d) The neighbor relationship is down.
+Correct: b
+
+What is a key advantage of OSPF over RIP?
+a) Simpler configuration
+b) Faster convergence
+c) Uses less bandwidth for updates
+d) Has a lower administrative distance
+Correct: b
+
+When troubleshooting OSPF, you notice two routers are stuck in the "2-WAY" state. What is the most likely cause on a broadcast network?
+a) Mismatched Area IDs
+b) They are both DROTHERs (non-DR/BDR routers) and do not need to form a full adjacency with each other.
+c) Mismatched authentication passwords
+d) Duplicate Router IDs
+Correct: b
+
+Which OSPF LSA type is flooded only within the area it originated and describes the links connected to a router?
+a) Type 1 - Router LSA
+b) Type 3 - Summary LSA
+c) Type 4 - ASBR Summary LSA
+d) Type 5 - AS External LSA
+Correct: a
+
+Day 29: FHRP (HSRP)
+What is the primary purpose of a First Hop Redundancy Protocol (FHRP) like HSRP?
+a) To load balance traffic between multiple default gateways
+b) To provide a virtual default gateway IP address for hosts, ensuring availability if the physical gateway fails
+c) To encrypt traffic between the host and the gateway
+d) To dynamically assign IP addresses to hosts
+Correct: b
+
+In HSRP, which router is responsible for forwarding traffic sent to the virtual IP address?
+a) The router with the highest IP address on the LAN
+b) The Standby router
+c) The Active router
+d) All routers in the HSRP group
+Correct: c
+
+What is the default HSRP priority value?
+a) 0
+b) 50
+c) 100
+d) 255
+Correct: c
+
+Which HSRP group number is valid for configuration?
+a) 0
+b) 256
+c) 1000
+d) 4096
+Correct: a (HSRP group numbers range from 0-255)
+
+What command is used to configure a router's HSRP priority?
+a) standby *group* priority *value*
+b) hsrp *group* priority *value*
+c) ip hsrp priority *value*
+d) redundancy priority *value*
+Correct: a
+
+
+
+Day 30: TCP & UDP
+Which protocol is connection-oriented and provides reliable data delivery with acknowledgments and sequencing?
+a) IP
+b) ICMP
+c) TCP
+d) UDP
+Correct: c
+
+What is the purpose of TCP's three-way handshake?
+a) To encrypt the data
+b) To establish a connection between sender and receiver
+c) To compress the data
+d) To negotiate window size
+Correct: b
+
+Which transport layer protocol would be most appropriate for VoIP traffic due to its low overhead?
+a) TCP
+b) FTP
+c) HTTP
+d) UDP
+Correct: d
+
+What does the term "windowing" refer to in TCP?
+a) The process of dividing data into segments
+b) The number of unacknowledged bytes that can be sent before requiring an acknowledgment
+c) The time between sending a segment and receiving its acknowledgment
+d) The process of establishing a connection
+Correct: b
+
+Which TCP header flag is used to initiate a connection and is set during the first step of the three-way handshake?
+a) ACK
+b) FIN
+c) SYN
+d) RST
+Correct: c
+
+Day 31: IPv6 (Part 1)
+What is the primary motivation for transitioning from IPv4 to IPv6?
+a) Improved security
+b) Faster routing
+c) Larger address space
+d) Simplified header format
+Correct: c
+
+How many bits are in an IPv6 address?
+a) 32
+b) 64
+c) 128
+d) 256
+Correct: c
+
+Which of the following is a valid IPv6 address representation?
+a) 2001:0db8:0000:0000:0000:ff00:0042:8329
+b) 2001:db8::ff00:42:8329
+c) Both a and b
+d) 2001:db8:0:0:0:ff00:42:8329:1
+Correct: c
+
+What is the IPv6 equivalent of IPv4's loopback address (127.0.0.1)?
+a) ::1
+b) fe80::1
+c) 2001::1
+d) ff02::1
+Correct: a
+
+Which IPv6 address type is used for communication between a single sender and the nearest of multiple receivers?
+a) Unicast
+b) Anycast
+c) Multicast
+d) Broadcast
+Correct: b
+
+Day 32: IPv6 (Part 2)
+What is the first 64 bits of an IPv6 address typically called?
+a) Interface ID
+b) Subnet prefix
+c) Network portion
+d) Global routing prefix
+Correct: b
+
+Which IPv6 address prefix is used for link-local addresses?
+a) 2001::/16
+b) fe80::/10
+c) fc00::/7
+d) ff00::/8
+Correct: b
+
+What IPv6 address type is used for communication with all devices on the local link?
+a) Unique local address
+b) Global unicast address
+c) Link-local multicast
+d) Solicited-node multicast
+Correct: c
+
+Which protocol replaces ARP in IPv6?
+a) NDP (Neighbor Discovery Protocol)
+b) ICMPv6
+c) DHCPv6
+d) EIGRP for IPv6
+Correct: a
+
+What is the purpose of Duplicate Address Detection (DAD) in IPv6?
+a) To discover default gateways
+b) To ensure no other node is using the same address on the link
+c) To find the MAC address of a neighbor
+d) To configure automatic addresses
+Correct: b
+
+Day 33: IPv6 (Part 3)
+Which method of IPv6 address assignment uses router advertisements but no DHCP server?
+a) SLAAC (Stateless Address Autoconfiguration)
+b) Stateful DHCPv6
+c) Static assignment
+d) EUI-64
+Correct: a
+
+What command enables IPv6 routing on a Cisco router?
+a) ipv6 enable
+b) ipv6 unicast-routing
+c) ipv6 routing
+d) enable ipv6
+Correct: b
+
+Which IPv6 transition technique encapsulates IPv6 packets inside IPv4 packets?
+a) Dual-stack
+b) NAT-PT
+c) 6to4 tunneling
+d) Teredo
+Correct: c
+
+How does SLAAC generate the Interface ID when using EUI-64?
+a) Uses a random number
+b) Inserts FFFE in the middle of the MAC address and flips the 7th bit
+c) Uses DHCPv6
+d) Uses the last 64 bits of the IPv4 address
+Correct: b
+
+Which command correctly assigns an IPv6 address to an interface?
+a) ip address 2001:db8:1::1/64
+b) ipv6 address 2001:db8:1::1/64
+c) address ipv6 2001:db8:1::1 255.255.255.0
+d) ipv6 2001:db8:1::1/64
+Correct: b
+
+Day 34: Standard ACLs
+What number range is used for standard IPv4 ACLs on Cisco devices?
+a) 1-99
+b) 100-199
+c) 200-299
+d) 1300-1999
+Correct: a
+
+Where should a standard ACL be placed for optimal performance and security?
+a) As close as possible to the source of the traffic
+b) As close as possible to the destination of the traffic
+c) On the core router
+d) On all routers in the path
+Correct: b
+
+What does this ACL entry do? access-list 1 deny 192.168.1.0 0.0.0.255
+a) Denies traffic from host 192.168.1.0
+b) Denies traffic from the entire 192.168.1.0/24 network
+c) Permits traffic from 192.168.1.0 network
+d) Denies traffic to 192.168.1.0 network
+Correct: b
+
+What is applied by default at the end of every ACL?
+a) permit any
+b) deny any
+c) permit host any
+d) An explicit permit for local traffic
+Correct: b
+
+Which wildcard mask would match exactly the host 10.1.1.1?
+a) 0.0.0.0
+b) 255.255.255.255
+c) 0.0.0.255
+d) 255.255.255.0
+Correct: a
+
+Day 35: Extended ACLs
+What number range is used for extended IPv4 ACLs on Cisco devices?
+a) 1-99
+b) 100-199
+c) 200-299
+d) Both b and c
+Correct: d
+
+Which of the following can an extended ACL filter based on? (Choose two)
+a) Source IP address only
+b) Source and destination IP address
+c) Protocol type (TCP, UDP, etc.)
+d) MAC address
+Correct: b, c
+
+Where should an extended ACL typically be placed?
+a) As close as possible to the source
+b) As close as possible to the destination
+c) On the firewall only
+d) Doesn't matter
+Correct: a
+
+What does this ACL entry do? access-list 101 permit tcp 192.168.1.0 0.0.0.255 any eq 80
+a) Permits TCP traffic from 192.168.1.0/24 to any destination on port 80
+b) Permits all traffic from 192.168.1.0/24
+c) Permits UDP traffic on port 80
+d) Denies web traffic from 192.168.1.0/24
+Correct: a
+
+Which command applies an ACL named MY-ACL to an interface for inbound traffic?
+a) ip access-group MY-ACL in
+b) access-class MY-ACL in
+c) apply access-list MY-ACL inbound
+d) ip access-list MY-ACL in
+Correct: a
+
+Day 36: CDP & LLDP
+What does CDP stand for?
+a) Cisco Device Protocol
+b) Cisco Discovery Protocol
+c) Connected Device Protocol
+d) Configuration Discovery Protocol
+Correct: b
+
+Which of the following information is NOT shared by CDP?
+a) Device hostname
+b) IP address
+c) Operating system version
+d) Routing table
+Correct: d
+
+What is a key advantage of LLDP over CDP?
+a) LLDP is proprietary to Cisco
+b) LLDP is vendor-neutral (IEEE 802.1AB)
+c) LLDP provides more detailed information
+d) LLDP uses less bandwidth
+Correct: b
+
+Which command shows CDP neighbors?
+a) show neighbors
+b) show cdp neighbors
+c) show lldp neighbors
+d) show cdp traffic
+Correct: b
+
+On which OSI layer do CDP and LLDP operate?
+a) Layer 1
+b) Layer 2
+c) Layer 3
+d) Layer 4
+Correct: b
+
+Day 37: NTP
+What is the primary purpose of NTP?
+a) To synchronize time across network devices
+b) To synchronize configurations
+c) To transfer files
+d) To manage IP addresses
+Correct: a
+
+What NTP stratum level is considered the most accurate time source?
+a) Stratum 0
+b) Stratum 1
+c) Stratum 15
+d) Stratum 16
+Correct: b
+
+Which command configures a Cisco router to synchronize its clock with an NTP server at 192.168.1.10?
+a) ntp server 192.168.1.10
+b) clock set 192.168.1.10
+c) time server 192.168.1.10
+d) ntp master 192.168.1.10
+Correct: a
+
+What happens if you configure a device as an NTP master without specifying a stratum?
+a) It becomes stratum 0
+b) It becomes stratum 1
+c) It becomes stratum 8
+d) It doesn't synchronize
+Correct: c
+
+Why is time synchronization important for network devices? (Choose two)
+a) For accurate timestamps in logs and troubleshooting
+b) For security certificate validation
+c) For faster routing convergence
+d) For QoS prioritization
+Correct: a, b
+
+Day 38: DNS
+What does DNS stand for?
+a) Domain Name System
+b) Dynamic Name Service
+c) Distributed Name Service
+d) Domain Network System
+Correct: a
+
+What type of DNS record maps a hostname to an IPv4 address?
+a) AAAA record
+b) CNAME record
+c) A record
+d) MX record
+Correct: c
+
+Which command configures a DNS server on a Cisco router?
+a) dns server 8.8.8.8
+b) ip name-server 8.8.8.8
+c) name-server 8.8.8.8
+d) ip dns server 8.8.8.8
+Correct: b
+
+What is the purpose of DNS caching?
+a) To store DNS records locally to reduce lookup time
+b) To encrypt DNS queries
+c) To distribute DNS load
+d) To prevent DNS attacks
+Correct: a
+
+Which DNS record type is used for mail servers?
+a) A record
+b) CNAME record
+c) TXT record
+d) MX record
+Correct: d
+
+Day 39: DHCP
+What does DHCP stand for?
+a) Dynamic Host Configuration Protocol
+b) Domain Host Control Protocol
+c) Dynamic Host Control Program
+d) Domain Host Configuration Protocol
+Correct: a
+
+What is the first message sent by a DHCP client?
+a) DHCP OFFER
+b) DHCP REQUEST
+c) DHCP DISCOVER
+d) DHCP ACK
+Correct: c
+
+Which DHCP message is a broadcast sent by the server offering an IP address?
+a) DHCP DISCOVER
+b) DHCP OFFER
+c) DHCP REQUEST
+d) DHCP ACK
+Correct: b
+
+What is included in a DHCP lease besides the IP address? (Choose two)
+a) Subnet mask
+b) Default gateway
+c) DNS server
+d) Routing table
+Correct: a, b, c
+
+Which command enables DHCP services on a Cisco router interface?
+a) ip dhcp server
+b) dhcp enable
+c) ip helper-address [dhcp-server-ip]
+d) service dhcp
+Correct: d
+
+Day 40: SNMP
+What does SNMP stand for?
+a) Simple Network Management Protocol
+b) System Network Management Program
+c) Simple Network Monitoring Protocol
+d) System Network Monitoring Protocol
+Correct: a
+
+Which SNMP component runs on network devices and responds to requests?
+a) Manager
+b) Agent
+c) MIB
+d) Community string
+Correct: b
+
+What is the purpose of the MIB?
+a) To store configuration files
+b) To define a database of manageable objects
+c) To encrypt SNMP traffic
+d) To authenticate users
+Correct: b
+
+Which SNMP version provides encryption and authentication?
+a) SNMPv1
+b) SNMPv2c
+c) SNMPv3
+d) All versions
+Correct: c
+
+What is a "trap" in SNMP?
+a) A request from manager to agent
+b) An unsolicited message from agent to manager
+c) A database query
+d) A configuration command
+Correct: b
+
+Day 41: Syslog
+What is the default syslog facility level on Cisco devices?
+a) local0
+b) local7
+c) user
+d) kern
+Correct: b
+
+Which syslog severity level indicates the highest severity?
+a) Debugging (7)
+b) Informational (6)
+c) Emergency (0)
+d) Warning (4)
+Correct: c
+
+What command sends syslog messages to a server at 192.168.1.100?
+a) logging host 192.168.1.100
+b) syslog server 192.168.1.100
+c) logging 192.168.1.100
+d) log host 192.168.1.100
+Correct: c
+
+Which command displays syslog messages on the console?
+a) show logging
+b) show log
+c) show syslog
+d) display logging
+Correct: a
+
+What does severity level 6 (Informational) typically indicate?
+a) System is unusable
+b) Normal but significant condition
+c) Informational messages only
+d) Debugging messages
+Correct: c
+
+Day 42: SSH
+Why is SSH preferred over Telnet?
+a) SSH is faster
+b) SSH provides encryption
+c) SSH uses less bandwidth
+d) SSH is easier to configure
+Correct: b
+
+What is the first step in configuring SSH on a Cisco device?
+a) Generate RSA keys
+b) Configure domain name
+c) Create local user accounts
+d) Enable SSH version 2
+Correct: b
+
+Which command generates RSA keys for SSH?
+a) crypto key generate rsa
+b) ssh generate keys
+c) generate rsa keys
+d) crypto generate rsa
+Correct: a
+
+What minimum modulus size is recommended for RSA keys?
+a) 512 bits
+b) 768 bits
+c) 1024 bits
+d) 2048 bits
+Correct: c
+
+Which command enables SSH on VTY lines?
+a) transport input ssh
+b) protocol ssh
+c) enable ssh
+d) ssh enable
+Correct: a
+
+Day 43: FTP & TFTP
+What is a key difference between FTP and TFTP?
+a) FTP uses TCP, TFTP uses UDP
+b) FTP is faster than TFTP
+c) TFTP provides authentication, FTP doesn't
+d) FTP uses port 69, TFTP uses port 21
+Correct: a
+
+Which port does FTP use for control connections?
+a) 20
+b) 21
+c) 22
+d) 23
+Correct: b
+
+What is TFTP commonly used for in networking?
+a) Transferring large files
+b) Backing up and restoring configurations
+c) Secure file transfers
+d) Email transfers
+Correct: b
+
+Which command copies a configuration file from a TFTP server?
+a) copy tftp running-config
+b) copy running-config tftp
+c) tftp get config
+d) copy tftp startup-config
+Correct: a
+
+What advantage does FTP have over TFTP?
+a) Simplicity
+b) Smaller overhead
+c) Reliability and authentication
+d) Speed
+Correct: c
+
+Day 44: NAT (Part 1 - Static)
+What does NAT stand for?
+a) Network Address Translation
+b) Network Access Translation
+c) Network Address Transformation
+d) Network Access Transformation
+Correct: a
+
+What is the primary purpose of NAT?
+a) To encrypt traffic
+b) To conserve public IP addresses
+c) To increase network speed
+d) To prevent viruses
+Correct: b
+
+In static NAT, how are private and public addresses mapped?
+a) One-to-many dynamically
+b) Many-to-one
+c) One-to-one permanently
+d) Based on port numbers
+Correct: c
+
+Which command creates a static NAT mapping for 192.168.1.10 to 203.0.113.5?
+a) ip nat inside source static 192.168.1.10 203.0.113.5
+b) nat static 192.168.1.10 203.0.113.5
+c) ip nat static 192.168.1.10 203.0.113.5
+d) static nat 192.168.1.10 203.0.113.5
+Correct: a
+
+Which interface is typically designated as "NAT inside"?
+a) The interface facing the Internet
+b) The interface connected to the local network
+c) Any interface
+d) The loopback interface
+Correct: b
+
+Day 45: NAT (Part 2 - Dynamic)
+What is the main advantage of dynamic NAT over static NAT?
+a) It's more secure
+b) It allows multiple internal hosts to share a pool of public addresses
+c) It's faster
+d) It doesn't require configuration
+Correct: b
+
+What does PAT stand for?
+a) Port Address Translation
+b) Protocol Address Translation
+c) Public Address Translation
+d) Private Address Translation
+Correct: a
+
+How does PAT allow multiple devices to share one public IP?
+a) By using different source ports
+b) By using different destination ports
+c) By using different protocols
+d) By using different MAC addresses
+Correct: a
+
+Which command creates a NAT pool named MYPOOL with addresses 203.0.113.1 to 203.0.113.10?
+a) ip nat pool MYPOOL 203.0.113.1 203.0.113.10 netmask 255.255.255.0
+b) nat pool MYPOOL 203.0.113.1-203.0.113.10
+c) ip nat pool MYPOOL 203.0.113.1 203.0.113.10 prefix-length 24
+d) create nat pool MYPOOL 203.0.113.1 203.0.113.10
+Correct: a
+
+What is overload in NAT configuration?
+a) Another term for PAT
+b) When NAT runs out of addresses
+c) When NAT is disabled
+d) When using static NAT
+Correct: a
+
+Day 46: QoS (Part 1)
+What does QoS stand for?
+a) Quality of Service
+b) Quantity of Service
+c) Queue of Service
+d) Quickness of Service
+Correct: a
+
+What is the primary goal of QoS?
+a) To increase bandwidth
+b) To prioritize certain types of traffic
+c) To encrypt all traffic
+d) To compress all traffic
+Correct: b
+
+Which QoS model provides the strongest guarantees?
+a) Best Effort
+b) Integrated Services (IntServ)
+c) Differentiated Services (DiffServ)
+d) FIFO
+Correct: b
+
+What does FIFO stand for in queuing?
+a) First In, First Out
+b) Fast In, Fast Out
+c) First Interface, First Out
+d) Frequent In, Frequent Out
+Correct: a
+
+Which type of traffic is typically given the highest priority in QoS?
+a) Email
+b) Web browsing
+c) VoIP
+d) File transfers
+Correct: c
+
+Day 47: QoS (Part 2)
+What is traffic policing in QoS?
+a) Discarding excess traffic
+b) Delaying excess traffic
+c) Prioritizing all traffic
+d) Encrypting traffic
+Correct: a
+
+What is traffic shaping?
+a) Discarding excess traffic
+b) Buffering and delaying excess traffic
+c) Blocking all traffic
+d) Speeding up traffic
+Correct: b
+
+Which DiffServ code point provides Expedited Forwarding (EF)?
+a) AF11
+b) CS1
+c) EF
+d) BE
+Correct: c
+
+What command marks traffic with DSCP value EF?
+a) set dscp ef
+b) mark dscp ef
+c) priority ef
+d) class-map ef
+Correct: a
+
+Which queuing method allows configuration of multiple queues with different priorities?
+a) FIFO
+b) PQ (Priority Queuing)
+c) CQ (Custom Queuing)
+d) WFQ (Weighted Fair Queuing)
+Correct: b
+
+Day 48: Security Fundamentals
+What is the principle of least privilege?
+a) Giving users all permissions they might need
+b) Giving users only the permissions they need to perform their job
+c) Giving administrators all permissions
+d) Removing all permissions by default
+Correct: b
+
+Which security concept ensures data hasn't been altered?
+a) Confidentiality
+b) Integrity
+c) Availability
+d) Authentication
+Correct: b
+
+What type of attack floods a network with traffic to make it unavailable?
+a) Phishing
+b) DDoS
+c) Man-in-the-middle
+d) Virus
+Correct: b
+
+What does AAA stand for in network security?
+a) Authentication, Authorization, Accounting
+b) Access, Authentication, Accounting
+c) Authorization, Access, Administration
+d) Authentication, Access, Accounting
+Correct: a
+
+Which protocol is commonly used for AAA?
+a) SNMP
+b) TACACS+
+c) FTP
+d) DHCP
+Correct: b
+
+Day 49: Port Security
+What is the purpose of port security?
+a) To encrypt port traffic
+b) To restrict which MAC addresses can access a switch port
+c) To increase port speed
+d) To monitor port usage
+Correct: b
+
+Which violation mode shuts down the port when an unauthorized MAC address is detected?
+a) Protect
+b) Restrict
+c) Shutdown
+d) Disable
+Correct: c
+
+What command enables port security on an interface?
+a) switchport port-security
+b) port-security enable
+c) security port
+d) enable port-security
+Correct: a
+
+How do you set the maximum number of MAC addresses on a secure port?
+a) switchport port-security maximum 3
+b) port-security max 3
+c) maximum-mac 3
+d) mac-limit 3
+Correct: a
+
+What command shows port security status?
+a) show port-security
+b) show interface port-security
+c) show port-security interface [interface]
+d) display port-security
+Correct: c
+
+Day 50: DHCP Snooping
+What is the primary purpose of DHCP snooping?
+a) To speed up DHCP responses
+b) To prevent rogue DHCP servers
+c) To encrypt DHCP traffic
+d) To compress DHCP packets
+Correct: b
+
+Which ports are considered trusted in DHCP snooping?
+a) All ports
+b) Only ports connected to legitimate DHCP servers
+c) Only access ports
+d) Only trunk ports
+Correct: b
+
+What does DHCP snooping create to track DHCP transactions?
+a) DHCP binding table
+b) ARP table
+c) MAC address table
+d) Routing table
+Correct: a
+
+Which command enables DHCP snooping globally?
+a) ip dhcp snooping
+b) dhcp snooping enable
+c) enable dhcp snooping
+d) snooping dhcp
+Correct: a
+
+How do you configure a port as trusted for DHCP snooping?
+a) ip dhcp snooping trust
+b) dhcp snooping trust
+c) switchport dhcp trust
+d) trust dhcp
+Correct: a
+
+Day 51: Dynamic ARP Inspection
+What attack does Dynamic ARP Inspection (DAI) prevent?
+a) DDoS attacks
+b) ARP spoofing/poisoning
+c) DHCP starvation
+d) MAC flooding
+Correct: b
+
+What must be enabled for DAI to work effectively?
+a) Port security
+b) DHCP snooping
+c) STP
+d) VLANs
+Correct: b
+
+Which ports are typically trusted for DAI?
+a) All ports
+b) Ports connected to other switches or routers
+c) Only access ports
+d) Only ports with port security enabled
+Correct: b
+
+What does DAI validate?
+a) IP addresses
+b) ARP packets (matching IP-MAC bindings)
+c) DHCP packets
+d) TCP sequence numbers
+Correct: b
+
+Which command enables DAI on a VLAN?
+a) ip arp inspection vlan 10
+b) arp inspection vlan 10
+c) dynamic arp inspection vlan 10
+d) enable arp inspection vlan 10
+Correct: a
+
+Day 52: LAN Architectures
+What are the three layers in the Cisco hierarchical network model?
+a) Core, Distribution, Access
+b) Core, Aggregation, Edge
+c) Backbone, Distribution, User
+d) Central, Intermediate, Endpoint
+Correct: a
+
+Which layer provides high-speed backbone connectivity?
+a) Access layer
+b) Distribution layer
+c) Core layer
+d) Edge layer
+Correct: c
+
+What is the main function of the access layer?
+a) Route between VLANs
+b) Provide network policy enforcement
+c) Connect end devices
+d) Aggregate WAN connections
+Correct: c
+
+What does collapsed core design combine?
+a) Access and distribution layers
+b) Distribution and core layers
+c) All three layers
+d) Core and WAN layers
+Correct: b
+
+Which design principle improves network availability?
+a) Using single connections
+b) Implementing redundancy
+c) Using older equipment
+d) Disabling protocols
+Correct: b
+
+Day 53: WAN Architectures
+What does GRE stand for?
+a) Generic Routing Encapsulation
+b) General Routing Encryption
+c) Generic Route Encoding
+d) General Route Encapsulation
+Correct: a
+
+What is the primary purpose of a GRE tunnel?
+a) To encrypt data
+b) To encapsulate various protocol packets inside IP tunnels
+c) To compress data
+d) To authenticate users
+Correct: b
+
+Which WAN technology uses virtual circuits identified by DLCI numbers?
+a) PPP
+b) Frame Relay
+c) HDLC
+d) MPLS
+Correct: b
+
+What is a key advantage of MPLS?
+a) It's the cheapest WAN technology
+b) It uses labels for faster switching
+c) It provides built-in encryption
+d) It doesn't require routers
+Correct: b
+
+Which command creates a GRE tunnel interface?
+a) interface tunnel 0
+b) tunnel 0
+c) create tunnel 0
+d) interface gre 0
+Correct: a
+
+Day 54: Cloud & Virtualization
+What is virtualization?
+a) Running multiple logical devices on single physical hardware
+b) Connecting multiple physical devices
+c) Encrypting all data
+d) Compressing files
+Correct: a
+
+What does VRF stand for?
+a) Virtual Routing and Forwarding
+b) Virtual Router Function
+c) VLAN Routing Forwarding
+d) Virtual Redundancy Feature
+Correct: a
+
+What is a key benefit of containers over traditional VMs?
+a) Better isolation
+b) Lower overhead and faster startup
+c) More secure
+d) Easier to manage
+Correct: b
+
+Which cloud model provides infrastructure (servers, storage, networking)?
+a) SaaS
+b) PaaS
+c) IaaS
+d) DaaS
+Correct: c
+
+What is the main advantage of cloud computing?
+a) Higher upfront costs
+b) On-demand scalability
+c) Less security
+d) Complex management
+Correct: b
+
+Day 55: Wireless Fundamentals
+What does SSID stand for?
+a) Security Set Identifier
+b) Service Set Identifier
+c) System Set ID
+d) Signal Strength Identifier
+Correct: b
+
+Which wireless standard operates at 5 GHz only?
+a) 802.11a
+b) 802.11b
+c) 802.11g
+d) 802.11n
+Correct: a
+
+What wireless mode allows devices to connect directly without an access point?
+a) Infrastructure mode
+b) Ad-hoc mode
+c) Bridge mode
+d) Repeater mode
+Correct: b
+
+Which factor most affects wireless signal strength?
+a) Distance
+b) Time of day
+c) Color of walls
+d) Number of users
+Correct: a
+
+What does RSSI measure?
+a) Received signal strength
+b) Transmitted power
+c) Network speed
+d) Encryption strength
+Correct: a
+
+Day 56: Wireless Architectures
+What is a wireless LAN controller (WLC)?
+a) A device that manages multiple APs centrally
+b) A type of wireless router
+c) A signal booster
+d) A security device
+Correct: a
+
+What does CAPWAP stand for?
+a) Control and Provisioning of Wireless Access Points
+b) Cisco Access Point Wireless Protocol
+c) Controlled AP Wireless Access Protocol
+d) Centralized AP Wireless Administration Protocol
+Correct: a
+
+Which wireless architecture uses autonomous APs?
+a) Centralized
+b) Distributed
+c) Cloud-based
+d) Standalone
+Correct: d
+
+What is the purpose of a wireless mesh network?
+a) To extend coverage without wired connections to each AP
+b) To increase speed
+c) To improve security
+d) To reduce costs
+Correct: a
+
+Which mode allows an AP to connect wirelessly to another AP?
+a) Root mode
+b) Bridge mode
+c) Repeater mode
+d) Client mode
+Correct: c
+
+Day 57: Wireless Security
+Which wireless security protocol is considered weakest?
+a) WEP
+b) WPA
+c) WPA2
+d) WPA3
+Correct: a
+
+What does WPA2 use for encryption?
+a) AES
+b) TKIP
+c) RC4
+d) DES
+Correct: a
+
+What is the main improvement in WPA3 over WPA2?
+a) Stronger encryption
+b) Simpler configuration
+c) Better performance
+d) Simultaneous Authentication of Equals (SAE) for better password protection
+Correct: d
+
+What does MAC filtering do?
+a) Encrypts traffic
+b) Allows/denies devices based on MAC address
+c) Hides SSID
+d) Increases signal strength
+Correct: b
+
+What is a rogue access point?
+a) An authorized AP with weak security
+b) An unauthorized AP connected to the network
+c) An AP in bridge mode
+d) An old AP
+Correct: b
+
+Day 58: Wireless Configuration
+Which command enters AP configuration mode on a Cisco switch?
+a) ap-config
+b) config-ap
+c) ap
+d) interface dot11radio
+Correct: d
+
+What does disabling SSID broadcast do?
+a) Makes network invisible in scan lists (but still discoverable)
+b) Encrypts the network
+c) Increases speed
+d) Prevents all connections
+Correct: a
+
+Which channel selection method is best for reducing interference?
+a) Manual channel selection
+b) Automatic channel selection
+c) Random channel selection
+d) Fixed channel 6
+Correct: b
+
+What is the purpose of setting transmit power?
+a) To control coverage area
+b) To increase security
+c) To change frequency
+d) To enable encryption
+Correct: a
+
+How do you assign a VLAN to a wireless SSID?
+a) vlan [vlan-id]
+b) ssid-vlan [vlan-id]
+c) In SSID configuration: vlan [vlan-id]
+d) wireless vlan [vlan-id]
+Correct: c
+
+Day 59: Network Automation (Intro)
+What is the main benefit of network automation?
+a) Increased manual configuration
+b) Consistency, speed, and reduced human error
+c) Higher costs
+d) More complex troubleshooting
+Correct: b
+
+Which protocol is commonly used for network automation?
+a) SNMP
+b) NETCONF
+c) FTP
+d) HTTP
+Correct: b
+
+What does API stand for?
+a) Application Programming Interface
+b) Automated Protocol Interface
+c) Application Protocol Integration
+d) Automated Programming Integration
+Correct: a
+
+Which tool is used for configuration management and automation?
+a) Wireshark
+b) Ansible
+c) Ping
+d) Traceroute
+Correct: b
+
+What is Infrastructure as Code (IaC)?
+a) Managing infrastructure through configuration files
+b) Writing code for applications
+c) Manual device configuration
+d) Network documentation
+Correct: a
+
+Day 60: JSON, XML, YAML
+What does JSON stand for?
+a) JavaScript Object Notation
+b) Java Standard Object Notation
+c) JavaScript Oriented Notation
+d) Java System Object Network
+Correct: a
+
+Which data format uses tags like <tag>value</tag>?
+a) JSON
+b) XML
+c) YAML
+d) CSV
+Correct: b
+
+What is a key advantage of YAML?
+a) Most verbose format
+b) Human-readable with minimal syntax
+c) Only works with JavaScript
+d) Requires end tags
+Correct: b
+
+Which data format is natively supported by JavaScript?
+a) XML
+b) YAML
+c) JSON
+d) HTML
+Correct: c
+
+What does this JSON represent? {"device": "router1", "ip": "10.1.1.1"}
+a) A list
+b) An object with key-value pairs
+c) An array
+d) A comment
+Correct: b
+
+Day 61: REST APIs
+What does REST stand for?
+a) Representational State Transfer
+b) Remote Execution State Transfer
+c) Representational System Transfer
+d) Remote State Transfer
+Correct: a
+
+Which HTTP method retrieves data from a REST API?
+a) POST
+b) GET
+c) PUT
+d) DELETE
+Correct: b
+
+What does HTTP status code 200 indicate?
+a) Error
+b) Success
+c) Not found
+d) Unauthorized
+Correct: b
+
+Which HTTP method updates an existing resource?
+a) POST
+b) GET
+c) PUT
+d) PATCH
+Correct: c
+
+What is typically returned by a REST API?
+a) Binary data
+b) JSON or XML
+c) HTML pages
+d) Plain text only
+Correct: b
+
+Day 62: SDN (Software Defined Networking)
+What does SDN stand for?
+a) Software Defined Networking
+b) System Defined Network
+c) Software Driven Network
+d) System Driven Networking
+Correct: a
+
+What is the main principle of SDN?
+a) Integrating control and data planes
+b) Separating control plane from data plane
+c) Making hardware more important
+d) Eliminating all software
+Correct: b
+
+Which protocol is commonly used between SDN controller and switches?
+a) OSPF
+b) BGP
+c) OpenFlow
+d) SNMP
+Correct: c
+
+What component in SDN makes centralized decisions?
+a) Data plane
+b) Control plane
+c) SDN controller
+d) Forwarding plane
+Correct: c
+
+What is a key benefit of SDN?
+a) More complex management
+b) Programmable, flexible networks
+c) Vendor lock-in
+d) Higher hardware costs
+Correct: b
