@@ -92,7 +92,7 @@ export const useEnrollment = () => {
 
       // Special Logic for Fiston: Lock on the 9st of every month
       if (user.email === 'intarefiston09@gmail.com') {
-        const lockDay = 21;
+        const lockDay = 0;
         const currentDay = now.getDate();
 
         // If we are on or past the 21st, check if he paid THIS month
