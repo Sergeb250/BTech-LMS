@@ -196,7 +196,7 @@ const Locked: React.FC = () => {
                                             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                                             MoMo Pay Merchant Code
                                         </p>
-                                        <p className="text-4xl font-mono font-bold text-white tracking-widest select-all my-2 group-hover:scale-105 transition-transform duration-300">729421</p>
+                                        <p className="text-4xl font-mono font-bold text-white tracking-widest select-all my-2 group-hover:scale-105 transition-transform duration-300">729421/0791822315</p>
                                         <div className="flex items-center justify-center gap-2 text-xs text-slate-500 mt-2 border-t border-white/5 pt-2">
                                             <span>Registered Name:</span>
                                             <span className="font-semibold text-slate-300">Serge Benit</span>
