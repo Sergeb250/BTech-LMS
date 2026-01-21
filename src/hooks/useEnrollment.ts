@@ -24,25 +24,36 @@ export const useEnrollment = () => {
       fetchEnrollment();
     } else {
       setEnrollment(null);
+      setCourseLocked(false);
       setLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
+
+  const isBypassUser = (email?: string | null) => {
+    const bypassEmails = ['hacksergeb@gmail.com', 'intarefiston09@gmail.com'];
+    return !!email && bypassEmails.includes(email.toLowerCase());
+  };
+
+  const makeBypassEnrollment = (): Enrollment => ({
+    id: 'admin-override',
+    course_id: 'ccna-200-301',
+    user_id: user!.id,
+    enrolled_at: new Date().toISOString(),
+    is_active: true,
+    payment_verified: true,
+    unlock_code: 'ADMIN-BYPASS'
+  });
 
   const fetchEnrollment = async () => {
     if (!user) return;
 
     try {
-      // Admin Override: Only Hacksergeb gets total bypass now (Fiston has monthly logic)
-      if (user.email === 'hacksergeb@gmail.com') {
-        setEnrollment({
-          id: 'admin-override',
-          course_id: 'ccna-200-301',
-          user_id: user.id,
-          enrolled_at: new Date().toISOString(),
-          is_active: true,
-          payment_verified: true,
-          unlock_code: 'ADMIN-BYPASS'
-        });
+      // ---------------------------------------------------------
+      // ADMIN BYPASS (Hacksergeb + Intare Fiston)
+      // ---------------------------------------------------------
+      if (isBypassUser(user.email)) {
+        setEnrollment(makeBypassEnrollment());
         setCourseLocked(false);
         setLoading(false);
         return;
@@ -61,17 +72,18 @@ export const useEnrollment = () => {
 
       setEnrollment(data);
 
-      // Check for local offline override if server data is missing or payment false
+      // ---------------------------------------------------------
+      // OFFLINE LOCAL OVERRIDE
+      // ---------------------------------------------------------
       const localOverride = localStorage.getItem(`payment_verified_${user.id}`);
       const isLocalVerified = localOverride === 'true';
-      const effectivePaymentVerified = data?.payment_verified || isLocalVerified;
+      const effectivePaymentVerified = !!(data?.payment_verified || isLocalVerified);
 
-      // Ensure local state sync
+      // Sync local -> state
       if (isLocalVerified && data && !data.payment_verified) {
         data.payment_verified = true;
-        setEnrollment({ ...data });
+        setEnrollment({ ...(data as Enrollment) });
       } else if (isLocalVerified && !data) {
-        // Create dummy enrollment if verified locally but server fetch failed
         setEnrollment({
           id: 'local-override',
           course_id: 'ccna-200-301',
@@ -84,66 +96,35 @@ export const useEnrollment = () => {
       }
 
       // ---------------------------------------------------------
-      // RECURRING PAYMENT LOGIC
+      // RECURRING PAYMENT LOGIC (GENERAL USERS)
       // ---------------------------------------------------------
       let isSubscriptionExpired = false;
       const now = new Date();
-      const enrolledDate = data?.enrolled_at ? new Date(data.enrolled_at) : new Date(0); // Default to epoch if null
+      const enrolledDate = data?.enrolled_at ? new Date(data.enrolled_at) : new Date(0);
 
-      // Special Logic for Fiston: Lock on the 9st of every month
-      if (user.email === 'intarefiston09@gmail.com') {
-        const lockDay = 0;
-        const currentDay = now.getDate();
+      // General User Logic: 30-day Rolling Window
+      const expirationDate = new Date(enrolledDate);
+      expirationDate.setDate(expirationDate.getDate() + 30);
 
-        // If we are on or past the 21st, check if he paid THIS month
-        if (currentDay >= lockDay) {
-          // He needs to have an enrolled_at date IN this current month (and year)
-          // AND the day of enrollment must be >= lockDay (9th).
-          const isSameMonth = enrolledDate.getMonth() === now.getMonth() && enrolledDate.getFullYear() === now.getFullYear();
-          const isAfterLockDate = enrolledDate.getDate() >= lockDay;
-
-          if (!isSameMonth || !isAfterLockDate) {
-            isSubscriptionExpired = true;
-          }
-        } else {
-          // If today < 9th, he is allowed access presumably if he paid *previous* month?
-          // For now, simpler requirement: He is unlocked if before 9th.
-          // Or should we check previous month payment? 
-          // User prompts suggest strictly "Lock on 9th". Implies before 9th is grace period / free.
-          isSubscriptionExpired = false;
-        }
-
-      } else {
-        // General User Logic: 30-day Rolling Window
-        // Expire if today > enrolled_at + 30 days
-        const expirationDate = new Date(enrolledDate);
-        expirationDate.setDate(expirationDate.getDate() + 30);
-
-        if (now > expirationDate) {
-          isSubscriptionExpired = true;
-        }
+      if (now > expirationDate) {
+        isSubscriptionExpired = true;
       }
 
       // ---------------------------------------------------------
       // DETERMINE LOCK STATUS
       // ---------------------------------------------------------
       // Course is locked IF:
-      // 1. User has NEVER paid (data null or !payment_verified locally/server)
-      // 2. OR Subscription has EXPRIED (Recurring check)
-
-      // If payment is purely verified via boolean but subscription expired -> convert to LOCKED
+      // 1) Never paid (server/local)
+      // OR
+      // 2) Subscription expired
       if (!effectivePaymentVerified || isSubscriptionExpired) {
         setCourseLocked(true);
-        // If expired, visually they might be 'verified' but access is revoked.
-        // We might want to update local state effectively?
-        // But we don't change 'enrollment.payment_verified' to false because that tracks LIFETIME history or current status?
-        // Actually, for UI "Payment Required" modal to appear, courseLocked=true is enough.
       } else {
         setCourseLocked(false);
       }
-
     } catch (error) {
       console.error('Error:', error);
+      setCourseLocked(true);
     } finally {
       setLoading(false);
     }
@@ -152,13 +133,20 @@ export const useEnrollment = () => {
   const enroll = async () => {
     if (!user) return { error: new Error('Not authenticated') };
 
+    // If bypass user, instantly enroll locally without touching DB
+    if (isBypassUser(user.email)) {
+      setEnrollment(makeBypassEnrollment());
+      setCourseLocked(false);
+      return { error: null };
+    }
+
     try {
       const { data, error } = await supabase
         .from('enrollments')
         .insert({
           user_id: user.id,
           course_id: 'ccna-200-301',
-          enrolled_at: new Date().toISOString() // Initial enrollment
+          enrolled_at: new Date().toISOString()
         })
         .select()
         .single();
@@ -174,27 +162,27 @@ export const useEnrollment = () => {
   };
 
   const verifyUnlockCode = async (code: string) => {
-    if (!user || !enrollment) return { success: false };
+    if (!user) return { success: false };
+
+    // If bypass user, always succeed without asking for payment / DB
+    if (isBypassUser(user.email)) {
+      setEnrollment(makeBypassEnrollment());
+      setCourseLocked(false);
+      return { success: true };
+    }
+
+    if (!enrollment) return { success: false };
 
     if (courseInfo.unlockCodes.includes(code.toUpperCase())) {
       try {
-        // Renewal Logic: Update 'enrolled_at' to reset the subscription timer
-        let newEnrolledAt = new Date();
-
-        // Fiston Special Renewal: Anchor to 9th of current month
-        if (user.email === 'intarefiston09@gmail.com') {
-          // We set it to the 9th of THIS month, ensuring the check (month === month) passes
-
-          // Handle edge case: if he pays early? (e.g. 5th)?
-          // If he pays on 5th, and we set to 9th, he is unlocked for current month (good) and won't lock until NEXT month 9th.
-        }
+        const newEnrolledAt = new Date();
 
         const { error } = await supabase
           .from('enrollments')
           .update({
             payment_verified: true,
             unlock_code: code,
-            enrolled_at: newEnrolledAt.toISOString() // UPDATE SUBSCRIPTION DATE
+            enrolled_at: newEnrolledAt.toISOString()
           })
           .eq('id', enrollment.id);
 
@@ -203,9 +191,11 @@ export const useEnrollment = () => {
         setEnrollment({
           ...enrollment,
           payment_verified: true,
+          unlock_code: code,
           enrolled_at: newEnrolledAt.toISOString()
         });
-        setCourseLocked(false); // Immediate unlock
+
+        setCourseLocked(false);
         return { success: true };
       } catch (error) {
         console.error('Error verifying code:', error);
@@ -214,9 +204,7 @@ export const useEnrollment = () => {
         console.warn('Server error detected. Enabling offline access mode.');
         localStorage.setItem(`payment_verified_${user.id}`, 'true');
 
-        if (enrollment) {
-          setEnrollment({ ...enrollment, payment_verified: true });
-        }
+        setEnrollment({ ...enrollment, payment_verified: true });
         setCourseLocked(false);
         return { success: true };
       }
