@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -12,14 +12,18 @@ import { Loader2, Mail, Lock, User, Network, ArrowRight } from 'lucide-react';
 const emailSchema = z.string().email('Please enter a valid email address');
 const passwordSchema = z.string().min(6, 'Password must be at least 6 characters');
 const nameSchema = z.string().min(2, 'Name must be at least 2 characters');
+const demoCredentials = {
+  email: 'intarefiston09@gmail.com',
+  password: 'fiston2026'
+};
 
 export const AuthForm: React.FC = () => {
   const [searchParams] = useSearchParams();
   const initialMode = searchParams.get('mode') === 'signup' ? 'signup' : 'signin';
 
   const [mode, setMode] = useState<'signin' | 'signup'>(initialMode);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(initialMode === 'signin' ? demoCredentials.email : '');
+  const [password, setPassword] = useState(initialMode === 'signin' ? demoCredentials.password : '');
   const [fullName, setFullName] = useState('');
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<{ email?: string; password?: string; name?: string }>({});
@@ -27,6 +31,18 @@ export const AuthForm: React.FC = () => {
   const { signIn, signUp } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  useEffect(() => {
+    if (mode === 'signin') {
+      setEmail(demoCredentials.email);
+      setPassword(demoCredentials.password);
+      setErrors({});
+    } else {
+      setEmail('');
+      setPassword('');
+      setErrors({});
+    }
+  }, [mode]);
 
   const validateForm = () => {
     const newErrors: { email?: string; password?: string; name?: string } = {};
@@ -190,6 +206,22 @@ export const AuthForm: React.FC = () => {
                   />
                 </div>
                 {errors.password && <p className="text-xs text-destructive">{errors.password}</p>}
+                {mode === 'signin' && (
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+                    <span>Demo account is available.</span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEmail(demoCredentials.email);
+                        setPassword(demoCredentials.password);
+                        setErrors({});
+                      }}
+                      className="font-semibold text-primary hover:underline"
+                    >
+                      Use demo credentials
+                    </button>
+                  </div>
+                )}
               </div>
 
               <Button type="submit" className="w-full h-11 font-semibold" disabled={loading}>
