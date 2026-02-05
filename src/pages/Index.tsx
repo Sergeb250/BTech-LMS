@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useAuth } from '@/contexts/AuthContext';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
@@ -10,15 +9,10 @@ import { courseInfo } from '@/data/courseData';
 import { BookOpen, Play, Award, Clock, Users, Globe, Zap, CheckCircle } from 'lucide-react';
 
 const Index = () => {
-  const { user } = useAuth();
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    if (user) {
-      navigate('/courses');
-    } else {
-      navigate('/auth?mode=signup');
-    }
+    navigate('/lesson/1');
   };
 
   const features = [
@@ -74,7 +68,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button size="lg" className="h-12 px-8 text-lg gap-2" onClick={handleGetStarted}>
                 <Zap className="w-5 h-5" />
-                {user ? 'Continue Learning' : 'Start Free Today'}
+                Start Learning
               </Button>
               <Button size="lg" variant="outline" className="h-12 px-8 text-lg" onClick={() => navigate('/courses')}>
                 View Curriculum

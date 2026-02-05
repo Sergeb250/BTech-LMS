@@ -93,6 +93,7 @@ export const useCourseProgress = () => {
     };
 
     const isDayUnlocked = (dayNumber: number): boolean => {
+        if (!user) return true;
         if (dayNumber === 1) return true; // Day 1 always unlocked
 
         // Check for specific user overrides

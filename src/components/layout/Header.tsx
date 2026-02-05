@@ -126,8 +126,8 @@ export const Header: React.FC = () => {
           ) : (
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <Button onClick={() => navigate('/auth')} className="shadow-lg shadow-primary/20 gap-2">
-                Get Started <ChevronRight className="w-4 h-4" />
+              <Button onClick={() => navigate('/lesson/1')} className="shadow-lg shadow-primary/20 gap-2">
+                Start Learning <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
           )}
@@ -167,8 +167,8 @@ export const Header: React.FC = () => {
                     Sign Out <LogOut className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 ) : (
-                  <Button onClick={() => navigate('/auth')} className="w-full justify-between group">
-                    Get Started <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button onClick={() => navigate('/lesson/1')} className="w-full justify-between group">
+                    Start Learning <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 )}
               </div>
