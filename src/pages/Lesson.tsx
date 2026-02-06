@@ -11,7 +11,7 @@ import { Footer } from '@/components/layout/Footer';
 import { VideoPlayer } from '@/components/course/VideoPlayer';
 import { PaymentModal } from '@/components/course/PaymentModal';
 import { Quiz } from '@/components/course/Quiz';
-import { Quiz } from '@/components/course/Quiz';
+// Duplicate import removed
 import { courseDays } from '@/data/courseData';
 import { getQuizForDay } from '@/data/quizData';
 import { supabase } from '@/integrations/supabase/client';
@@ -189,14 +189,30 @@ const Lesson: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                 <div className="lg:col-span-3 space-y-6">
                   {dayNum === 65 ? (
-                    <div className="text-center py-10">
-                      <h1 className="text-4xl font-bold text-primary mb-4">🎉 Congratulations!</h1>
-                      <p className="text-xl text-muted-foreground mb-8">You have successfully completed the CCNA Networking Journey!</p>
-                      <p className="text-lg text-muted-foreground">Thank you for learning with B Technologies Africa.</p>
+                    <div className="flex flex-col items-center justify-center py-16 text-center space-y-8 animate-in fade-in zoom-in duration-500">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
+                        <div className="relative bg-gradient-to-br from-amber-400 to-orange-500 p-10 rounded-full shadow-2xl ring-8 ring-background">
+                          <Award className="w-24 h-24 text-white" />
+                        </div>
+                      </div>
 
-                      <div className="mt-8">
-                        <Button onClick={() => navigate('/courses')} size="lg">
-                          Return to Course List
+                      <div className="space-y-4 max-w-lg">
+                        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 uppercase tracking-widest shadow-sm">
+                          Course Goal
+                        </div>
+                        <h1 className="text-5xl font-extrabold tracking-tight">
+                          Ready for CCNA Exam
+                        </h1>
+                        <p className="text-xl text-muted-foreground leading-relaxed">
+                          You have mastered the networking fundamentals and are now fully prepared to take your official Cisco Certified Network Associate exam.
+                        </p>
+                      </div>
+
+                      <div className="flex gap-4 pt-4">
+                        <Button onClick={() => navigate('/courses')} size="lg" variant="outline" className="h-12 px-8 text-lg gap-2">
+                          <BookOpen className="w-5 h-5" />
+                          Review Curriculum
                         </Button>
                       </div>
                     </div>

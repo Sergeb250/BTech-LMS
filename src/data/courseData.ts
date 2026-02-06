@@ -272,7 +272,7 @@ export const courseDays: Day[] = [
     dayNumber: 19,
     title: "DTP & VTP",
     part: "Switching & VLANs",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d19-lesson", title: "DTP & VTP", youtubeId: "JtQV_0Sjszg", type: "lesson" },
       { id: "d19-lab", title: "Lab: DTP & VTP", youtubeId: "ngTns2vF_44", type: "lab" }
@@ -282,7 +282,7 @@ export const courseDays: Day[] = [
     dayNumber: 20,
     title: "Spanning Tree Protocol (Part 1)",
     part: "Switching & VLANs",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d20-lesson", title: "Spanning Tree Protocol (Part 1)", youtubeId: "j-bK-EFt9cY", type: "lesson" },
       { id: "d20-lab", title: "Lab: Analyzing STP", youtubeId: "Ev9gy7B5hx0", type: "lab" }
@@ -292,7 +292,7 @@ export const courseDays: Day[] = [
     dayNumber: 21,
     title: "Spanning Tree Protocol (Part 2)",
     part: "Switching & VLANs",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d21-lesson", title: "Spanning Tree Protocol (Part 2)", youtubeId: "nWpldCc8msY", type: "lesson" },
       { id: "d21-lab1", title: "Lab: Configuring STP", youtubeId: "zqzppl4LOwk", type: "lab" },
@@ -306,7 +306,7 @@ export const courseDays: Day[] = [
     dayNumber: 22,
     title: "Rapid STP",
     part: "Switching & VLANs",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d22-lesson", title: "Rapid STP", youtubeId: "EpazNsLlPps", type: "lesson" },
       { id: "d22-lab", title: "Lab: Rapid STP", youtubeId: "YG7r4XHy2JU", type: "lab" }
@@ -316,7 +316,7 @@ export const courseDays: Day[] = [
     dayNumber: 23,
     title: "EtherChannel",
     part: "Switching & VLANs",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d23-lesson", title: "EtherChannel", youtubeId: "xuo69Joy_Nc", type: "lesson" },
       { id: "d23-lab", title: "Lab: EtherChannel", youtubeId: "8gKF2fMMjA8", type: "lab" }
@@ -327,7 +327,7 @@ export const courseDays: Day[] = [
     dayNumber: 24,
     title: "Dynamic Routing",
     part: "Dynamic Routing",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d24-lesson", title: "Dynamic Routing", youtubeId: "xSTgb8JLkvs", type: "lesson" },
       { id: "d24-lab", title: "Lab: Floating Static Routes", youtubeId: "KuKC0G3LZc8", type: "lab" }
@@ -337,7 +337,7 @@ export const courseDays: Day[] = [
     dayNumber: 25,
     title: "RIP & EIGRP",
     part: "Dynamic Routing",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d25-lesson", title: "RIP & EIGRP", youtubeId: "N8PiZDld6Zc", type: "lesson" },
       { id: "d25-lab", title: "Lab: Configuring EIGRP", youtubeId: "ffnJ5oBIObY", type: "lab" }
@@ -347,7 +347,7 @@ export const courseDays: Day[] = [
     dayNumber: 26,
     title: "OSPF (Part 1)",
     part: "Dynamic Routing",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d26-lesson", title: "OSPF (Part 1)", youtubeId: "pvuaoJ9YzoI", type: "lesson" },
       { id: "d26-lab", title: "Lab: Configuring OSPF (1)", youtubeId: "LeLRWjfylcs", type: "lab" }
@@ -357,7 +357,7 @@ export const courseDays: Day[] = [
     dayNumber: 27,
     title: "OSPF (Part 2)",
     part: "Dynamic Routing",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d27-lesson", title: "OSPF (Part 2)", youtubeId: "VtzfTA21ht0", type: "lesson" },
       { id: "d27-lab", title: "Lab: Configuring OSPF (2)", youtubeId: "UEyQW-EcnY8", type: "lab" }
@@ -367,7 +367,7 @@ export const courseDays: Day[] = [
     dayNumber: 28,
     title: "OSPF (Part 3)",
     part: "Dynamic Routing",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d28-lesson", title: "OSPF (Part 3)", youtubeId: "3ew26ujkiDI", type: "lesson" },
       { id: "d28-lab", title: "Lab: Configuring OSPF (3)", youtubeId: "Goekjm3bK5o", type: "lab" }
@@ -378,7 +378,7 @@ export const courseDays: Day[] = [
     dayNumber: 29,
     title: "FHRP (HSRP)",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d29-lesson", title: "FHRP (HSRP)", youtubeId: "43WnpwQMolo", type: "lesson" },
       { id: "d29-lab", title: "Lab: Configuring HSRP", youtubeId: "uho5Z2nFhb8", type: "lab" }
@@ -388,7 +388,7 @@ export const courseDays: Day[] = [
     dayNumber: 30,
     title: "TCP & UDP",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d30-lesson", title: "TCP & UDP", youtubeId: "LIEACBqlntY", type: "lesson" },
       { id: "d30-lab", title: "Lab: Wireshark Demo (TCP/UDP)", youtubeId: "pJKFahkqMU8", type: "lab" }
@@ -398,7 +398,7 @@ export const courseDays: Day[] = [
     dayNumber: 31,
     title: "IPv6 (Part 1)",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d31-lesson", title: "IPv6 (Part 1)", youtubeId: "ZNuXyOXae5U", type: "lesson" },
       { id: "d31-lab", title: "Lab: Configuring IPv6 (1)", youtubeId: "BdsIahtrWIA", type: "lab" }
@@ -408,7 +408,7 @@ export const courseDays: Day[] = [
     dayNumber: 32,
     title: "IPv6 (Part 2)",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d32-lesson", title: "IPv6 (Part 2)", youtubeId: "BrTMMOXFhDU", type: "lesson" },
       { id: "d32-lab", title: "Lab: Configuring IPv6 (2)", youtubeId: "Zfhpd7dl6QI", type: "lab" }
@@ -418,7 +418,7 @@ export const courseDays: Day[] = [
     dayNumber: 33,
     title: "IPv6 (Part 3)",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d33-lesson", title: "IPv6 (Part 3)", youtubeId: "rwkHfsWQwy8", type: "lesson" },
       { id: "d33-lab", title: "Lab: Configuring IPv6 (3)", youtubeId: "WSBEVFANMmc", type: "lab" }
@@ -428,7 +428,7 @@ export const courseDays: Day[] = [
     dayNumber: 34,
     title: "Standard ACLs",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d34-lesson", title: "Standard ACLs", youtubeId: "z023_eRUtSo", type: "lesson" },
       { id: "d34-lab", title: "Lab: Standard ACLs", youtubeId: "sJ8PXmiAkvs", type: "lab" }
@@ -438,7 +438,7 @@ export const courseDays: Day[] = [
     dayNumber: 35,
     title: "Extended ACLs",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d35-lesson", title: "Extended ACLs", youtubeId: "dUttKY_CNXE", type: "lesson" },
       { id: "d35-lab", title: "Lab: Extended ACLs", youtubeId: "1cuMzWBrEYs", type: "lab" }
@@ -448,7 +448,7 @@ export const courseDays: Day[] = [
     dayNumber: 36,
     title: "CDP & LLDP",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d36-lesson", title: "CDP & LLDP", youtubeId: "_hnMZBzXRRk", type: "lesson" },
       { id: "d36-lab", title: "Lab: CDP & LLDP", youtubeId: "4s8qqL7R9W8", type: "lab" }
@@ -458,7 +458,7 @@ export const courseDays: Day[] = [
     dayNumber: 37,
     title: "NTP",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d37-lesson", title: "NTP", youtubeId: "qGJaJx7OfUo", type: "lesson" },
       { id: "d37-lab", title: "Lab: NTP", youtubeId: "Miys7Ft9wWI", type: "lab" }
@@ -468,7 +468,7 @@ export const courseDays: Day[] = [
     dayNumber: 38,
     title: "DNS",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d38-lesson", title: "DNS", youtubeId: "4C6eeQes4cs", type: "lesson" },
       { id: "d38-lab", title: "Lab: DNS", youtubeId: "7D_FapNrRUM", type: "lab" }
@@ -478,7 +478,7 @@ export const courseDays: Day[] = [
     dayNumber: 39,
     title: "DHCP",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d39-lesson", title: "DHCP", youtubeId: "hzkleGAC2_Y", type: "lesson" },
       { id: "d39-lab", title: "Lab: DHCP", youtubeId: "cgMsoIQB9Wk", type: "lab" }
@@ -488,7 +488,7 @@ export const courseDays: Day[] = [
     dayNumber: 40,
     title: "SNMP",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d40-lesson", title: "SNMP", youtubeId: "HXu0Ifj0oWU", type: "lesson" },
       { id: "d40-lab", title: "Lab: SNMP", youtubeId: "v8WxIytUdS4", type: "lab" }
@@ -498,7 +498,7 @@ export const courseDays: Day[] = [
     dayNumber: 41,
     title: "Syslog",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d41-lesson", title: "Syslog", youtubeId: "RaQPSKQ4J5A", type: "lesson" },
       { id: "d41-lab", title: "Lab: Syslog", youtubeId: "-R_CYM6Wm-Y", type: "lab" }
@@ -508,7 +508,7 @@ export const courseDays: Day[] = [
     dayNumber: 42,
     title: "SSH",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d42-lesson", title: "SSH", youtubeId: "AvgYqI2qSD4", type: "lesson" },
       { id: "d42-lab", title: "Lab: SSH", youtubeId: "QnHq7iCOtTc", type: "lab" }
@@ -518,7 +518,7 @@ export const courseDays: Day[] = [
     dayNumber: 43,
     title: "FTP & TFTP",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d43-lesson", title: "FTP & TFTP", youtubeId: "50hcfsoBf4Q", type: "lesson" },
       { id: "d43-lab", title: "Lab: FTP & TFTP", youtubeId: "W9PLvA2wZ28", type: "lab" }
@@ -528,7 +528,7 @@ export const courseDays: Day[] = [
     dayNumber: 44,
     title: "NAT (Part 1 - Static)",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d44-lesson", title: "NAT (Part 1 - Static)", youtubeId: "2TZCfTgopeg", type: "lesson" },
       { id: "d44-lab", title: "Lab: Static NAT", youtubeId: "vir6n_NVZFw", type: "lab" }
@@ -538,7 +538,7 @@ export const courseDays: Day[] = [
     dayNumber: 45,
     title: "NAT (Part 2 - Dynamic)",
     part: "IP Services & Security",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d45-lesson", title: "NAT (Part 2 - Dynamic)", youtubeId: "kILDNs4KjYE", type: "lesson" },
       { id: "d45-lab", title: "Lab: Dynamic NAT", youtubeId: "vNs1xxiwGJs", type: "lab" }
@@ -549,7 +549,7 @@ export const courseDays: Day[] = [
     dayNumber: 46,
     title: "QoS (Part 1)",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d46-lesson", title: "QoS (Part 1)", youtubeId: "H6FKJMiiL6E", type: "lesson" },
       { id: "d46-lab", title: "Lab: Voice VLANs", youtubeId: "kGX76QNIjsE", type: "lab" }
@@ -559,7 +559,7 @@ export const courseDays: Day[] = [
     dayNumber: 47,
     title: "QoS (Part 2)",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d47-lesson", title: "QoS (Part 2)", youtubeId: "4vurfhVjcMM", type: "lesson" },
       { id: "d47-lab", title: "Lab: QoS", youtubeId: "63tD4t8189k", type: "lab" }
@@ -569,7 +569,7 @@ export const courseDays: Day[] = [
     dayNumber: 48,
     title: "Security Fundamentals",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d48-lesson", title: "Security Fundamentals", youtubeId: "VvFuieyTTSw", type: "lesson" },
       { id: "d48-lab", title: "Lab: Kali Linux Demo", youtubeId: "EBs47-0ZD-A", type: "lab" }
@@ -579,7 +579,7 @@ export const courseDays: Day[] = [
     dayNumber: 49,
     title: "Port Security",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d49-lesson", title: "Port Security", youtubeId: "sHN3jOJIido", type: "lesson" },
       { id: "d49-lab", title: "Lab: Port Security", youtubeId: "zZwhrxKeGj8", type: "lab" }
@@ -589,7 +589,7 @@ export const courseDays: Day[] = [
     dayNumber: 50,
     title: "DHCP Snooping",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d50-lesson", title: "DHCP Snooping", youtubeId: "qYYeg2kz1yE", type: "lesson" },
       { id: "d50-lab", title: "Lab: DHCP Snooping", youtubeId: "YMom_e545H4", type: "lab" }
@@ -599,7 +599,7 @@ export const courseDays: Day[] = [
     dayNumber: 51,
     title: "Dynamic ARP Inspection",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d51-lesson", title: "Dynamic ARP Inspection", youtubeId: "HwbTKaIvL6s", type: "lesson" },
       { id: "d51-lab", title: "Lab: DAI", youtubeId: "oLF2mbmYMAk", type: "lab" }
@@ -609,7 +609,7 @@ export const courseDays: Day[] = [
     dayNumber: 52,
     title: "LAN Architectures",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d52-lesson", title: "LAN Architectures", youtubeId: "PvyEcLhmNBk", type: "lesson" },
       { id: "d52-lab", title: "Lab: STP & FHRP Sync", youtubeId: "BgIEhyoETgU", type: "lab" }
@@ -619,7 +619,7 @@ export const courseDays: Day[] = [
     dayNumber: 53,
     title: "WAN Architectures",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d53-lesson", title: "WAN Architectures", youtubeId: "BW3fQgdf4-w", type: "lesson" },
       { id: "d53-lab", title: "Lab: GRE Tunnels", youtubeId: "_MMuU5viinM", type: "lab" }
@@ -629,7 +629,7 @@ export const courseDays: Day[] = [
     dayNumber: 54,
     title: "Cloud & Virtualization",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d54-lesson", title: "Cloud & Virtualization", youtubeId: "_S3greGajJA", type: "lesson" },
       { id: "d54-lab1", title: "Lab: Containers", youtubeId: "K731pAS22Aw", type: "lab" },
@@ -640,7 +640,7 @@ export const courseDays: Day[] = [
     dayNumber: 55,
     title: "Wireless Fundamentals",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d55-lesson", title: "Wireless Fundamentals", youtubeId: "zuYiktLqNYQ", type: "lesson" }
     ]
@@ -649,7 +649,7 @@ export const courseDays: Day[] = [
     dayNumber: 56,
     title: "Wireless Architectures",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d56-lesson", title: "Wireless Architectures", youtubeId: "uX1h0F6wpBY", type: "lesson" }
     ]
@@ -658,7 +658,7 @@ export const courseDays: Day[] = [
     dayNumber: 57,
     title: "Wireless Security",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d57-lesson", title: "Wireless Security", youtubeId: "wHXKo9So5y8", type: "lesson" }
     ]
@@ -667,7 +667,7 @@ export const courseDays: Day[] = [
     dayNumber: 58,
     title: "Wireless Configuration",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d58-lesson", title: "Wireless Configuration", youtubeId: "r9o6GFI87go", type: "lesson" },
       { id: "d58-lab", title: "Lab: Wireless LANs", youtubeId: "Il8ev78fcqw", type: "lab" }
@@ -677,7 +677,7 @@ export const courseDays: Day[] = [
     dayNumber: 59,
     title: "Network Automation (Intro)",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d59-lesson", title: "Network Automation (Intro)", youtubeId: "4tsBgMCPVuc", type: "lesson" }
     ]
@@ -686,7 +686,7 @@ export const courseDays: Day[] = [
     dayNumber: 60,
     title: "JSON, XML, YAML",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d60-lesson", title: "JSON, XML, YAML", youtubeId: "nohde2-QNJ4", type: "lesson" }
     ]
@@ -695,7 +695,7 @@ export const courseDays: Day[] = [
     dayNumber: 61,
     title: "REST APIs",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d61-lesson", title: "REST APIs", youtubeId: "Luei0p-2h10", type: "lesson" }
     ]
@@ -704,7 +704,7 @@ export const courseDays: Day[] = [
     dayNumber: 62,
     title: "SDN (Software Defined Networking)",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d62-lesson", title: "SDN", youtubeId: "7HhWCeXDTpA", type: "lesson" }
     ]
@@ -713,7 +713,7 @@ export const courseDays: Day[] = [
     dayNumber: 63,
     title: "Ansible, Puppet, Chef",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d63-lesson", title: "Ansible, Puppet, Chef", youtubeId: "Kog9gHTjALI", type: "lesson" }
     ]
@@ -722,16 +722,16 @@ export const courseDays: Day[] = [
     dayNumber: 64,
     title: "Capstone Project",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: [
       { id: "d64-lesson", title: "Capstone Project", youtubeId: "2p7-MluKAgE", type: "lesson" }
     ]
   },
   {
     dayNumber: 65,
-    title: "Certification",
+    title: "Ready for CCNA Exam",
     part: "Advanced Services & Automation",
-    isLocked: true,
+    isLocked: false,
     videos: []
   }
 ];

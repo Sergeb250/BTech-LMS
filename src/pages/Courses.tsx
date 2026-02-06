@@ -32,7 +32,8 @@ const Courses = () => {
     : courseDays.filter(day => day.part === selectedPart);
 
   const handleDayClick = (dayNumber: number) => {
-    if (isDayUnlocked(dayNumber)) {
+    // Always allow access to Day 65 (Goal)
+    if (dayNumber === 65 || isDayUnlocked(dayNumber)) {
       navigate(`/lesson/${dayNumber}`);
     } else {
       if (courseLocked && dayNumber > 18) {
@@ -102,16 +103,22 @@ const Courses = () => {
               </Tabs>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {filteredDays.map((day, index) => (
-                  <DayCard
-                    key={day.dayNumber}
-                    day={day}
-                    index={index}
-                    isCompleted={completedDays.includes(day.dayNumber)}
-                    isLocked={!isDayUnlocked(day.dayNumber)}
-                    onClick={() => handleDayClick(day.dayNumber)}
-                  />
-                ))}
+                {filteredDays.map((day, index) => {
+                  // Special handling for Day 65 (Goal) - Always unlocked
+                  const isGoalDay = day.dayNumber === 65;
+                  const locked = isGoalDay ? false : !isDayUnlocked(day.dayNumber);
+
+                  return (
+                    <DayCard
+                      key={day.dayNumber}
+                      day={day}
+                      index={index}
+                      isCompleted={completedDays.includes(day.dayNumber)}
+                      isLocked={locked}
+                      onClick={() => handleDayClick(day.dayNumber)}
+                    />
+                  );
+                })}
               </div>
             </div>
 

@@ -93,33 +93,8 @@ export const useCourseProgress = () => {
     };
 
     const isDayUnlocked = (dayNumber: number): boolean => {
-        if (dayNumber === 1) return true; // Day 1 always unlocked
-
-        // Check for specific user overrides
-        if (user?.email === 'hacksergeb@gmail.com') {
-            if (dayNumber <= 63) return true;
-        }
-
-        if (user?.email === 'intarefiston09@gmail.com') {
-            // For this user, enforce lock after day 18, even if they have progress (if strict payment lock is desired)
-            // or just ensure they are unlocked UP TO 18.
-            // Request said: "unlock course up to day 18... Lock platfom for user intarefiston09@gmail.com"
-            // This implies standard behavior (free trial) applies, but we ensure it's unlocked.
-            // Standard behavior unlocks 1-18. So we just need to make sure we don't accidentally lock 1-18.
-            if (dayNumber <= 18) return true;
-        }
-
-        // Check if previous day is completed
-        const prevDayCompleted = completedDays.includes(dayNumber - 1);
-
-        // Also check global course lock (payment)
-        // If courseLocked is true, days > 18 are locked regardless of progress
-        if (courseLocked && dayNumber > 18) {
-            // Explicitly unlock for hacksergeb even if payment is required (already handled above)
-            return false;
-        }
-
-        return prevDayCompleted;
+        // OPEN ACCESS: All days are unlocked for everyone
+        return true;
     };
 
     return {
