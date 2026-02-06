@@ -14,11 +14,8 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    if (user) {
-      navigate('/courses');
-    } else {
-      navigate('/auth?mode=signup');
-    }
+    // Direct access implementation
+    navigate('/courses');
   };
 
   const features = [
@@ -74,7 +71,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button size="lg" className="h-12 px-8 text-lg gap-2" onClick={handleGetStarted}>
                 <Zap className="w-5 h-5" />
-                {user ? 'Continue Learning' : 'Start Free Today'}
+                Start Learning Now
               </Button>
               <Button size="lg" variant="outline" className="h-12 px-8 text-lg" onClick={() => navigate('/courses')}>
                 View Curriculum

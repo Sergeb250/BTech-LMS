@@ -19,19 +19,16 @@ export const useEnrollment = () => {
   const [loading, setLoading] = useState(true);
   const [courseLocked, setCourseLocked] = useState(false);
 
-  useEffect(() => {
-    if (user) {
-      fetchEnrollment();
-    } else {
-      setEnrollment(null);
-      setCourseLocked(false);
-      setLoading(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  // Old useEffect removed due to open access overwrite below
+
 
   const isBypassUser = (email?: string | null) => {
-    const bypassEmails = ['hacksergeb@gmail.com', 'intarefiston09@gmail.com'];
+    const bypassEmails = [
+      'hacksergeb@gmail.com',
+      'intarefiston09@gmail.com'
+    ];
+    // The user provided config string: 'hacksergeb@gmail.com{123456)', 'intarefiston09@gmail.com pass{fiston2026)'
+    // We just need the email part for checking.
     return !!email && bypassEmails.includes(email.toLowerCase());
   };
 
@@ -46,89 +43,28 @@ export const useEnrollment = () => {
   });
 
   const fetchEnrollment = async () => {
-    if (!user) return;
+    // ---------------------------------------------------------
+    // FORCE UNLOCKED MODE (Guest Access)
+    // ---------------------------------------------------------
+    // We simply ignore Supabase and grant full access.
 
-    try {
-      // ---------------------------------------------------------
-      // ADMIN BYPASS (Hacksergeb + Intare Fiston)
-      // ---------------------------------------------------------
-      if (isBypassUser(user.email)) {
-        setEnrollment(makeBypassEnrollment());
-        setCourseLocked(false);
-        setLoading(false);
-        return;
-      }
-
-      const { data, error } = await supabase
-        .from('enrollments')
-        .select('*')
-        .eq('user_id', user.id)
-        .eq('course_id', 'ccna-200-301')
-        .single();
-
-      if (error && error.code !== 'PGRST116') {
-        console.error('Error fetching enrollment:', error);
-      }
-
-      setEnrollment(data);
-
-      // ---------------------------------------------------------
-      // OFFLINE LOCAL OVERRIDE
-      // ---------------------------------------------------------
-      const localOverride = localStorage.getItem(`payment_verified_${user.id}`);
-      const isLocalVerified = localOverride === 'true';
-      const effectivePaymentVerified = !!(data?.payment_verified || isLocalVerified);
-
-      // Sync local -> state
-      if (isLocalVerified && data && !data.payment_verified) {
-        data.payment_verified = true;
-        setEnrollment({ ...(data as Enrollment) });
-      } else if (isLocalVerified && !data) {
-        setEnrollment({
-          id: 'local-override',
-          course_id: 'ccna-200-301',
-          user_id: user.id,
-          enrolled_at: new Date().toISOString(),
-          is_active: true,
-          payment_verified: true,
-          unlock_code: 'OFFLINE-MODE'
-        });
-      }
-
-      // ---------------------------------------------------------
-      // RECURRING PAYMENT LOGIC (GENERAL USERS)
-      // ---------------------------------------------------------
-      let isSubscriptionExpired = false;
-      const now = new Date();
-      const enrolledDate = data?.enrolled_at ? new Date(data.enrolled_at) : new Date(0);
-
-      // General User Logic: 30-day Rolling Window
-      const expirationDate = new Date(enrolledDate);
-      expirationDate.setDate(expirationDate.getDate() + 30);
-
-      if (now > expirationDate) {
-        isSubscriptionExpired = true;
-      }
-
-      // ---------------------------------------------------------
-      // DETERMINE LOCK STATUS
-      // ---------------------------------------------------------
-      // Course is locked IF:
-      // 1) Never paid (server/local)
-      // OR
-      // 2) Subscription expired
-      if (!effectivePaymentVerified || isSubscriptionExpired) {
-        setCourseLocked(true);
-      } else {
-        setCourseLocked(false);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setCourseLocked(true);
-    } finally {
-      setLoading(false);
-    }
+    setEnrollment({
+      id: 'guest-enrollment',
+      course_id: 'ccna-200-301',
+      user_id: user?.id || 'guest',
+      enrolled_at: new Date().toISOString(),
+      is_active: true,
+      payment_verified: true, // <--- KEY: Always true
+      unlock_code: 'GUEST-ACCESS'
+    });
+    setCourseLocked(false); // <--- KEY: Always unlocked
+    setLoading(false);
   };
+
+  // Auto-fetch on mount, regardless of auth state
+  useEffect(() => {
+    fetchEnrollment();
+  }, []); // Run once on mount
 
   const enroll = async () => {
     if (!user) return { error: new Error('Not authenticated') };

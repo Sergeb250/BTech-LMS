@@ -20,7 +20,7 @@ import { NavLink as RouterNavLink } from 'react-router-dom';
 import { useTheme } from '@/components/theme-provider'; // Assuming this exists or will be replaced by local logic if context differs
 
 export const Header: React.FC = () => {
-  const { user, signOut } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -33,10 +33,6 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSignOut = async () => {
-    await signOut();
-    navigate('/');
-  };
 
   return (
     <header
@@ -74,63 +70,13 @@ export const Header: React.FC = () => {
             Courses
           </NavLink>
 
-          {user ? (
-            <div className="flex items-center gap-4 pl-4 border-l border-border/50">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative h-10 w-10 rounded-full cursor-pointer hover:bg-muted/50 p-0">
-                    <Avatar className="h-10 w-10 border-2 border-background shadow-sm transition-transform group-active:scale-95">
-                      <AvatarImage src="" alt={user.email || "User"} />
-                      <AvatarFallback className="bg-gradient-to-br from-primary to-blue-600 text-white font-bold">
-                        {user.email?.charAt(0).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56" align="end" forceMount>
-                  <DropdownMenuLabel className="font-normal">
-                    <div className="flex flex-col space-y-1">
-                      <p className="text-sm font-medium leading-none">{user.email?.split('@')[0]}</p>
-                      <p className="text-xs leading-none text-muted-foreground">
-                        {user.email}
-                      </p>
-                    </div>
-                  </DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={() => navigate('/profile')}>
-                    <UserCircle className="mr-2 h-4 w-4" />
-                    <span>Profile</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => navigate('/settings')}>
-                    <Settings className="mr-2 h-4 w-4" />
-                    <span>Settings</span>
-                  </DropdownMenuItem>
+          <Button onClick={() => navigate('/settings')} variant="ghost" size="icon">
+            <Settings className="w-5 h-5" />
+          </Button>
 
-                  {/* Theme Toggle Item */}
-                  <div className="px-2 py-1.5 flex items-center justify-between">
-                    <div className="flex items-center text-sm">
-                      <Monitor className="mr-2 h-4 w-4" />
-                      <span>Theme</span>
-                    </div>
-                    <ThemeToggle />
-                  </div>
-
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem className="text-destructive focus:bg-destructive/10" onClick={handleSignOut}>
-                    <LogOut className="mr-2 h-4 w-4" />
-                    <span>Log out</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          ) : (
-            <div className="flex items-center gap-4">
-              <ThemeToggle />
-              <Button onClick={() => navigate('/auth')} className="shadow-lg shadow-primary/20 gap-2">
-                Get Started <ChevronRight className="w-4 h-4" />
-              </Button>
-            </div>
-          )}
+          <div className="flex items-center gap-4 pl-4 border-l border-border/50">
+            <ThemeToggle />
+          </div>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -162,15 +108,10 @@ export const Header: React.FC = () => {
                   <span className="text-sm font-medium">Appearance</span>
                   <ThemeToggle />
                 </div>
-                {user ? (
-                  <Button variant="destructive" onClick={handleSignOut} className="w-full justify-between group">
-                    Sign Out <LogOut className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                ) : (
-                  <Button onClick={() => navigate('/auth')} className="w-full justify-between group">
-                    Get Started <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                )}
+
+                <Button onClick={() => navigate('/settings')} variant="outline" className="w-full justify-start gap-2">
+                  <Settings className="w-4 h-4" /> Settings
+                </Button>
               </div>
             </div>
           </motion.div>

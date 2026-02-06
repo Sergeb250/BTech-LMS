@@ -14,59 +14,34 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Set up auth state listener FIRST
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-        setLoading(false);
-      }
-    );
-
-    // THEN check for existing session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      setLoading(false);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const signUp = async (email: string, password: string, fullName: string) => {
-    const redirectUrl = `${window.location.origin}/`;
-    
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: redirectUrl,
-        data: {
-          full_name: fullName
-        }
-      }
-    });
-    
-    return { error: error as Error | null };
+  // MOCK USER FOR OPEN ACCESS
+  const mockUser: User = {
+    id: 'guest-user-123',
+    app_metadata: {},
+    user_metadata: { full_name: 'Guest Student' },
+    aud: 'authenticated',
+    created_at: new Date().toISOString(),
+    email: 'guest@btech.africa',
+    phone: '',
+    role: 'authenticated',
+    updated_at: new Date().toISOString()
   };
 
-  const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    });
-    
-    return { error: error as Error | null };
-  };
+  // Always return the mock user
+  const [user] = useState<User | null>(mockUser);
+  const [session] = useState<Session | null>({
+    access_token: 'mock-token',
+    refresh_token: 'mock-refresh',
+    expires_in: 3600,
+    token_type: 'bearer',
+    user: mockUser
+  });
+  const [loading] = useState(false);
 
-  const signOut = async () => {
-    await supabase.auth.signOut();
-  };
+  // Dummy functions that do nothing or log
+  const signUp = async () => ({ error: null });
+  const signIn = async () => ({ error: null });
+  const signOut = async () => { console.log("Sign out disabled for open access"); };
 
   return (
     <AuthContext.Provider value={{ user, session, loading, signUp, signIn, signOut }}>

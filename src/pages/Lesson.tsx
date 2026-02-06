@@ -11,7 +11,7 @@ import { Footer } from '@/components/layout/Footer';
 import { VideoPlayer } from '@/components/course/VideoPlayer';
 import { PaymentModal } from '@/components/course/PaymentModal';
 import { Quiz } from '@/components/course/Quiz';
-import { Certificate } from '@/components/course/Certificate';
+import { Quiz } from '@/components/course/Quiz';
 import { courseDays } from '@/data/courseData';
 import { getQuizForDay } from '@/data/quizData';
 import { supabase } from '@/integrations/supabase/client';
@@ -190,24 +190,14 @@ const Lesson: React.FC = () => {
                 <div className="lg:col-span-3 space-y-6">
                   {dayNum === 65 ? (
                     <div className="text-center py-10">
-                      {isProgressionLocked ? (
-                        <>
-                          <h1 className="text-3xl font-bold text-muted-foreground mb-4">Certificate Locked</h1>
-                          <p className="text-lg text-muted-foreground mb-8">Complete all previous lessons to unlock your certificate of completion.</p>
-                        </>
-                      ) : (
-                        <>
-                          <h1 className="text-4xl font-bold text-primary mb-4">🎉 Congratulations, {userProfile?.full_name?.split(' ')[0] || "Champion"}!</h1>
-                          <p className="text-xl text-muted-foreground mb-8">You have successfully completed the CCNA Networking Journey!</p>
-                        </>
-                      )}
+                      <h1 className="text-4xl font-bold text-primary mb-4">🎉 Congratulations!</h1>
+                      <p className="text-xl text-muted-foreground mb-8">You have successfully completed the CCNA Networking Journey!</p>
+                      <p className="text-lg text-muted-foreground">Thank you for learning with B Technologies Africa.</p>
 
-                      <div className="border rounded-lg overflow-hidden shadow-2xl">
-                        <Certificate
-                          studentName={userProfile?.full_name || 'Student'}
-                          completionDate={new Date().toLocaleDateString()}
-                          locked={isProgressionLocked}
-                        />
+                      <div className="mt-8">
+                        <Button onClick={() => navigate('/courses')} size="lg">
+                          Return to Course List
+                        </Button>
                       </div>
                     </div>
                   ) : (
