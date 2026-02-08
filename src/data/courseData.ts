@@ -65,20 +65,6 @@ export const courseFiles: CourseFile[] = [
     description: 'Hands-on practice labs and flashcard questions'
   },
   {
-    id: 'book1',
-    title: 'CCNA Official Cert Guide Vol 1',
-    type: 'book',
-    url: 'https://drive.google.com/file/d/1pAZIO5i9TXY5ti1gxPTckUS5su6e6qkl/view?usp=sharing',
-    description: 'Official certification study guide - Volume 1'
-  },
-  {
-    id: 'book2',
-    title: 'CCNA Official Cert Guide Vol 2',
-    type: 'book',
-    url: 'https://drive.google.com/file/d/1wtMXKhkpuSxfZb6VNiJ9KDt5zh76IpDm/view?usp=sharing',
-    description: 'Official certification study guide - Volume 2'
-  },
-  {
     id: 'questions',
     title: 'CCNA Practice Questions',
     type: 'questions',

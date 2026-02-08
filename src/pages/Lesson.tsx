@@ -281,11 +281,11 @@ const Lesson: React.FC = () => {
 
                       {getQuizForDay(dayNum) && dayNum !== 64 && (
                         <div
-                          onClick={() => (isFiston || day.videos.every(v => isVideoCompleted(dayNum, v.id))) && setCurrentVideoIndex(day.videos.length)}
+                          onClick={() => setCurrentVideoIndex(day.videos.length)}
                           className={`
                                                         flex items-center gap-3 p-3 rounded-lg border transition-all
                                                         ${currentVideoIndex === day.videos.length ? 'bg-primary/10 border-primary' : 'bg-card border-transparent'}
-                                                        ${!isFiston && !day.videos.every(v => isVideoCompleted(dayNum, v.id)) ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:bg-muted'}
+                                                        cursor-pointer hover:bg-muted
                                                     `}
                         >
                           <div className={`p-1.5 rounded-full ${quizPassed ? 'text-green-600 bg-green-100' : 'text-muted-foreground bg-muted'}`}>
@@ -294,10 +294,10 @@ const Lesson: React.FC = () => {
                           <div className="flex-1">
                             <p className="text-sm font-medium">Daily Quiz</p>
                             <p className="text-xs text-muted-foreground">
-                              {(isFiston || day.videos.every(v => isVideoCompleted(dayNum, v.id))) ? "Available" : "Locked - Watch videos first"}
+                              Available
                             </p>
                           </div>
-                          {!(isFiston || day.videos.every(v => isVideoCompleted(dayNum, v.id))) && <Lock className="w-4 h-4 text-muted-foreground" />}
+
                         </div>
                       )}
                     </div>
